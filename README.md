@@ -1,110 +1,96 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Planning Phase
 
-Welcome USER_NAME,
+## Strategy:
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### User Research:
+Ireland attracts a large number of students from all over the world, making the search for accommodation challenging. Many students cannot afford expensive student accommodations and opt for cheaper options, such as shared houses with 2, 3, 4, or sometimes more roommates. Additionally, some students prefer single rooms depending on their budget.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+*Note: The user research conducted for this project was based on personal experiences, as I, as an international student, faced similar challenges upon arriving in Ireland. Most of my friends also encountered similar difficulties.*
 
-## Gitpod Reminders
+### Competitive Analysis:
+Existing platforms often facilitate accommodation searches through real estate agencies, but response times can be slow due to high demand. Moreover, Facebook communities like "Brazilian Students in Dublin" or "Venezuelan Students in Dublin" also serve as a resource, but searching can be complicated due to various posts and outdated listings. Our platform will focus solely on available rooms, removing listings once they are rented out.
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+*Note: The competitive analysis was also informed by personal experiences and observations, recognizing the limitations of existing platforms.*
 
-`python3 -m http.server`
+### Feature Prioritization:
+Based on user research and competitive analysis, prioritize features that address the pain points identified. Key features include:
+ - User-friendly room listing creation process, allowing users offering a room to specify details like price of rent, location, description and photos.
+ - Robust search and filtering options to help users find suitable accommodation quickly.
+ - Secure messaging system for communication between users interested in renting or listing rooms.
+ - Communication with the Post Author, details offered like, email and phone.
+ - User authentication and profile management functionalities like Delete and Edit posts.
+ - Admin panel for content moderation and management to ensure the platform's integrity.
 
-A blue button should appear to click: _Make Public_,
+### User Personas:
+Develop user personas representing different segments of the target audience, such as:
+- **Maria:** A budget-conscious international student looking for an affordable shared room close to her university.
+- **Ahmed:** An exchange student seeking a single room with specific amenities within a reasonable budget.
+- **Emily:** A local homeowner interested in renting out a spare room to international students for extra income.
 
-Another blue button should appear to click: _Open Browser_.
+*Note: The creation of user personas was influenced by personal experiences and interactions with individuals facing similar accommodation challenges.*
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Brand Identity:
+RoomFinder Ireland's brand identity, which includes the logo, colour scheme, and tone of voice, is designed to connect with its users. The logo represents simplicity and trust. The font is easy to read and friendly. The tone of voice is welcoming and helpful. Consistency across the platform ensures that users always feel at ease, reinforcing the platform's values of reliability, affordability, and inclusivity.
 
-A blue button should appear to click: _Make Public_,
+## Scope:
 
-Another blue button should appear to click: _Open Browser_.
+RoomFinder Ireland aims to provide a user-friendly online platform for international students in Ireland to find suitable accommodation. The scope of the project includes the development of key features essential for the platform's functionality and usability:
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+### User Registration and Authentication:
+- Users will be able to create an account, providing necessary information such as name, email, and password.
 
-To log into the Heroku toolbelt CLI:
+### Room Listing Creation:
+- Users can list available rooms for rent, specifying details like price of rent, room type (shared or single), location, description and photos.
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+### Location API Integration:
+- Integration of a location API to provide advanced mapping and geocoding features, allowing users to visualize the location of listed rooms and find properties based on proximity to points of interest or specific areas of the city.
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Searching and Filtering:
+- Students can search for available rooms based on criteria such as location, price range and room type.
 
-------
+### Messaging System:
+- A secure messaging system would facilitate communication between users interested in renting or listing rooms, allowing for negotiation and arrangement of terms.
 
-## Release History
+### Communication with Post Author:
+- Users will have access to contact information, such as email and phone number of the author of a post, enabling direct communication for further inquiries or arrangements.
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+### User Management:
+- Users will have the ability to manage their profiles, update personal information, view their own posts, and have options to delete or edit a post if needed.
 
-**September 20 2023:** Update Python version to 3.9.17.
+### Admin Panel:
+- An admin panel will allow for content moderation, user management, and monitoring of platform activity.
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- Admins will be able to approve or unapprove a post for publication.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+- Admins will have the capability to delete any post if necessary.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+*Additionally, features have been classified based on their importance using the MOSCOW prioritization:*
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+UX efforts **must** address these:
+- Register and Authentication.
+- Login.
+- Room Listing Creation.
+- Post approved/unpproved (only by admin).
+- User Profile Management.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+UX efforts **should have** these:
+- Location API Integration.
+- Room Searching and Filtering.
+- Messaging System.
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+UX efforts **could have** these:
+- Advanced Notification System: Implementation of an advanced notification system to alert users about new listings matching their preferences, updates on their inquiries, or important platform announcements.
+- Social Media Integration: Integration with social media platforms to allow users to share listings or invite friends to join the platform, enhancing user engagement and expanding the platform's reach.
+- Advanced Notification System: Implementation of an advanced notification system to alert users about new listings matching their preferences, updates on their inquiries, or important platform announcements.
+- Review and Rating System: Incorporation of a review and rating system where users can provide feedback and rate their experiences with landlords and accommodations, helping other users make informed decisions.
+- Localized Language Support: Addition of localized language support to cater to users from diverse linguistic backgrounds, providing a more inclusive experience and expanding the platform's accessibility.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+## Structure
+The structure of RoomFinder Ireland's platform is designed to ensure intuitive navigation and easy access to key features.
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+![User flow chart](docs/images/workFlow.png)
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+(I used [Lucidchart](https://www.lucidchart.com/) to help me visualize the user journey)
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+The flowchart illustrates the user journey within the platform, detailing every step from user registration to room listing creation, searching for accommodations, communication with post authors, and Admin management. Each stage is carefully mapped out to optimize user interaction and streamline the process of finding and renting accommodations
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
