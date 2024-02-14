@@ -64,7 +64,7 @@ RoomFinder Ireland aims to provide a user-friendly online platform for internati
 
 - Admins will have the capability to delete any post if necessary.
 
-*Additionally, features have been classified based on their importance using the MOSCOW prioritization:*
+Additionally, features have been classified based on their importance using the MOSCOW prioritization:
 
 UX efforts **must** address these:
 - Register and Authentication.
@@ -96,51 +96,53 @@ The flowchart illustrates the user journey within the platform, detailing every 
 
 ### User Stories:
 
-#### As **an Admin**...
+- #### As **an Admin**...
 
-- As an admin, I want to be able to use a text editor within the admin panel to create and edit room listings in a clear and visually appealing way.
+As an **Admin**, I can **utilize a text editor within the admin panel** so that **I can create and edit room listings in a clear and visually appealing way.**
 
-- As an admin, I want to be able to filter and search all room listings from the admin page so that I can review, edit, and delete listings quickly.
+As an **Admin**, I can **filter and search all room listings from the admin page** so that **I can review, edit, and delete listings quickly.**
 
-- As an admin, I want to be able to easily navigate the admin panel to view, search, add, and delete room listings.
+As an **Admin**, I can **easily navigate the admin panel** so that **I can view, search, add, and delete room listings.**
 
-- As an admin, I want to be able to approve new room listings offered by users for the community so that I can ensure listings are accurate and suitable.
+As an **Admin**, I can **approve new room listings offered by users for the community** so that **I can ensure listings are accurate and suitable.**
 
-- As an admin, I want to be able to access a list of pending room listings, where I can review details such as location, price, and photos.
+As an **Admin**, I can **access a list of pending room listings** so that **I can review details such as location, price, and photos.**
 
-- As an admin, I want to have the authority to reject room listings that do not meet the platform's standards or violate community guidelines, providing clear reasons for rejection to users.
+As an **Admin**, I can **reject room listings that do not meet the platform's standards or violate community guidelines** so that **I can provide clear reasons for rejection to users.**
 
-- As an admin, I want to receive notifications when a room is rented so that I can promptly remove the listing from the platform, ensuring accurate availability information for users searching for available rooms.
+As an **Admin**, I can **receive notifications when a room is rented** so that **remove the listing from the platform, ensuring accurate availability information for users searching for available rooms.**
 
-#### As a **user offering** a room...
 
-- As a user offering a room, I want to be able to create an account.
+- #### As a **user offering a room**...
 
-- As a user offering a room, I want to be able to easily create a listing for a room I have available for rent, providing all necessary details and photos.
+As a **user offering a room**, I can **create an account** so that **I can access the platform's features.**
 
-- As a user offering a room, I want to receive an alert informing me that my post has been submitted for review.
+As a **user offering a room**, I can **easily create a listing for a room I have available for rent, providing all necessary details and photos**, so that **I can attract potential tenants.**
 
-- As a user offering a room, I want to be able to manage my room listings, including editing or deleting them as needed.
+As a **user offering a room**, I can **receive an alert** so that **I am informed when my post has been submitted for review.**
 
-- As a user offering a room, I want to be notified when someone contacts me regarding my room listing, and I want to be able to respond promptly.
+As a **user offering a room**, I can **manage my room listings, including editing or deleting them as needed**, so that **I have control over my listings.**
 
-- As a user searching for a room, I want to easily find relevant contact information so that I can contact the site administrator via email if needed.
+As a **user offering a room**, I can **receive notifications when someone contacts me regarding my room listing, and I can respond promptly**, so that **I can engage with potential renters effectively.**
 
-#### As a **user searching** for a room...
+As a **user offering a room**, I can **easily find relevant contact information** so that **I can contact the site administrator via email if needed.**
 
-- As a user searching for a room, I want to be able to create an account.
 
-- As a user searching for a room, I want to be able to search for available rooms based on my preferences (location, price, type of room) so that I can find suitable accommodation.
+- #### As a **user searching for a room**...
 
-- As a user searching for a room, I want to be able to view detailed information and photos of available rooms.
+As a **user searching for a room** I can **create an account** so that **I can access all the features.**
 
-- As a user searching for a room, I want to be able to get the contact the owner details such as email or phone.
+As a **user searching for a room** I can **search for available rooms based on my preferences (location, price, type of room)** so that **I can find suitable accommodation that meets my needs.**
 
-- Access the platform from any screen size and still have an enjoyable browsing experience, ensuring usability across multiple devices.
+As a **user searching for a room** I can **view detailed information and photos of available rooms** so that **I can make informed decisions about potential accommodations.**
 
-- As a user searching for a room, I want to be able to type a URL into the web browser and navigate to the various pages of the website effortlessly.
+As a **user searching for a room** I can **get the contact details of the owner, such as email or phone** so that **I can communicate directly regarding the room.**
 
-- As a user searching for a room, I want to easily find relevant contact information so that I can contact the site administrator via email if needed.
+As a **user searching for a room** I can **access the platform from any screen size and still have a good browsing experience** so that **I can easily search for rooms using any device.**
+
+As a **user searching for a room** I can **easily navigate to various pages of the website by typing a URL into the web browser** so that **can explore different listings effortlessly.**
+
+As a **user searching for a room** I can **quickly locate relevant contact information** so that ** I can contact the site administrator via email if necessary.**
 
 ## Skeleton
 
