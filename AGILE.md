@@ -17,9 +17,7 @@
 
 **3.	Room Searching and Filtering:**
 
-- Implement robust search functionality allowing users to search for available rooms based on location, price range, amenities, and room type.
-
-- Optimize search results for relevance and speed.
+- Implement robust search functionality allowing users to search for available rooms based on location, price range and room type.
 
 **4.	Messaging System between Users:**
 
@@ -42,17 +40,19 @@
 
 ## Sprint
 
+In our sprint planning session, we utilize the Fibonacci sequence to assign story points to each user story. This sequence offers a relative scale that helps us estimate the effort required for completing each task. A story point of 1 represents the simplest and quickest tasks, while higher numbers such as 8 or 13 indicate more complex and time-consuming stories. By using this scale, we can effectively prioritize and allocate resources to ensure a successful sprint delivery.
+
 ### Sprint 1:
 
-- Set up Git repository - *(2 story points)*
+- Set up Git repository - *(1 story points)*
 
 - Set up Django project structure - *(3 story points)*
 
-- Install necessary libraries and dependencies - *(2 story points)*
+- Install necessary libraries and dependencies - *(3 story points)*
 
 - Configure database settings and attach to Heroku app - *(3 story points)*
 
-- Deploy initial application - *(2 story points)*
+- Deploy initial application - *(3 story points)*
 
 ### Sprint 2:
 
@@ -62,25 +62,25 @@
 
 - Develop user authentication mechanism - *(8 story points)*
 
-- Complete deployment for initial testing - 3 story points
+- Complete deployment for initial testing - *(3 story points)*
 
-- Conduct user testing on registration and authentication features - *(2 story points)*
+- Conduct user manual testing on registration and authentication features - *(2 story points)*
 
 ### Sprint 3:
 
-- Implement room listing creation functionality - *(5 story points)*
+- Implement room listing creation functionality - *(8 story points)*
 
-- Develop room listing management features for users - *(7 story points)*
+- Develop room listing management features for users - *(8 story points)*
 
-- Admin Story: Implement admin panel for content management - *(6 story points)*
+- Admin Story: Implement admin panel for content management - *(5 story points)*
 
-- Deploy updated features for testing - *(3 story points)*
+- Deploy updated features - *(3 story points)*
 
 ### Sprint 4:
 
-- Implement room searching functionality - *(5 story points)*
+- Implement room searching functionality - *(13 story points)*
 
-- Enhance search features with filtering options - *(7 story points)*
+- Enhance search features with filtering options - *(13 story points)*
 
 - Deploy search and filtering features - *(3 story points)*
 
@@ -88,9 +88,9 @@
 
 ### Sprint 5:
 
-- Develop messaging system between users - *(8 story points)*
+- Develop messaging system between users - *(13 story points)*
 
-- Implement notifications for new messages - *(5 story points)*
+- Implement notifications for new messages - *(13 story points)*
 
 - Deploy messaging features - *(3 story points)*
 
@@ -100,7 +100,7 @@
 
 - Allow users to manage their profiles - *(5 story points)*
 
-- Implement options for users to delete and edit listings - *(6 story points)*
+- Implement options for users to delete and edit listings - *(8 story points)*
 
 - Deploy profile management features - *(3 story points)*
 
@@ -108,7 +108,7 @@
 
 ### Sprint 7:
 
-- Develop admin tools for content moderation - *(7 story points)*
+- Develop admin tools for content moderation - *(8 story points)*
 
 - Deploy admin panel features - *(3 story points)*
 
@@ -118,22 +118,22 @@
 
 - Identify performance in the application - *(3 story points)*
 
-- Conduct testing to ensure good performance - *(4 story points)*
+- Conduct testing to ensure good performance - *(5 story points)*
 
 ### Sprint 9:
 
 - Conduct comprehensive testing of all features and functionalities - *(5 story points)*
 
-- Identify and address any bugs or issues found during testing - *(6 story points)*
+- Identify and address any bugs or issues found during testing - *(5 story points)*
 
-- Perform testing to ensure previous features remain functional - *(4 story points)*
+- Perform testing to ensure previous features remain functional - *(5 story points)*
 
-- Prepare application for production deployment - *(3 story points)*
+- Deploy - *(2 story points)*
 
 ### Sprint 10:
 
-- Deploy fully tested and bug-free application to production environment - *(5 story points)*
+- Deploy fully tested and bug-free application to production environment - *(8 story points)*
 
-- Check application performance post-deployment - *(3 story points)*
+- Check application performance post-deployment - *(5 story points)*
 
-- Conduct final user testing - *(3 story points)*
+- Conduct final user testing - *(5 story points)*
