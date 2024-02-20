@@ -31,7 +31,8 @@ SECRET_KEY = 'django-insecure-8bbsungm+w40jng^v=xu(2r%&ul6kf8^d#9%lw1m$nsbwgw+7_
 DEBUG = False
 
 ALLOWED_HOSTS = [
-    '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io'
+    '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io',
+    '.herokuapp.com'
 ]
 
 
