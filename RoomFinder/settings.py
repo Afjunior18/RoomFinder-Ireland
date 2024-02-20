@@ -28,11 +28,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-8bbsungm+w40jng^v=xu(2r%&ul6kf8^d#9%lw1m$nsbwgw+7_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io',
-    '.herokuapp.com'
+    '.herokuapp.com',
+    '8000-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io'
 ]
 
 
