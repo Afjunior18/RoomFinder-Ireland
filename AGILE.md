@@ -44,6 +44,13 @@ In our sprint planning session, we utilize the Fibonacci sequence to assign stor
 
 ### Sprint 1:
 
+Estimated conclusion: Starts on the 19th at 12:20 pm and ends on the 21st at 11:59 pm.
+
+During Sprint 1, which started on February 19th at 12:20pm and concluded on February 21st at 5:50pm, I successfully completed the tasks.
+Despite encountering some challenges, such as difficulties in connecting the database to Heroku and deployment issues related to static files, I managed to overcome them. To utilize the remaining time effectively, I proactively addressed future tasks, including creating the static directory with subdirectories (css, js, images) and the template directory with HTML files (currently empty but intended for future use). 
+
+Additionally, I verified the connectivity of these directories to ensure smooth functioning.
+
 - Set up Git repository - *(1 story points)*
 
 - Set up Django project structure - *(3 story points)*
