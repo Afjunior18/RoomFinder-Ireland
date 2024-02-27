@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = [
     '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io',
@@ -135,7 +135,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
-# Cloudinary, storage images 
+# Cloudinary, storage images
 
 CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', 'cloudinary://452764376732519:vKBrQ6fjHwFxaIs2kk4vk9ypfsU@dnijabg52')
 

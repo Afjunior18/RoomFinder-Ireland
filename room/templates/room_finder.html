@@ -3,9 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Available Rooms</title>
 </head>
 <body>
-    room_finder
+    <div class="container">
+        <div class="row">
+            {% for room in rooms %}
+                <div class="col-md-3 col-sm-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title">Room Description:</h5>
+                            <p class="card-text">{{ room.room_description }}</p>
+                            <h5 class="card-title">Room Owner:</h5>
+                            <p class="card-text">{{ room.room_owner }}</p>
+                            <h5 class="card-title">Room Availability:</h5>
+                            <p class="card-text">{{ room.room_availability }}</p>
+                            <h5 class="card-title">Room Type:</h5>
+                            <p class="card-text">{{ room.get_room_type_display }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
 </body>
 </html>
