@@ -17,8 +17,5 @@ def about(request):
 def add_room(request):
     return render(request, 'add_room.html')
 
-def search_room(request):
-    return render(request, 'search_room.html')
-
 def room_finder(request):
     return render(request, 'room_finder.html')
