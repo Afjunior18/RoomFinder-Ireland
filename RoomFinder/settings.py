@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io',
@@ -144,3 +144,8 @@ CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', 'cloudinary://452764376732519:vKBrQ
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://*.codeanyapp.com",
+    "https://*.herokuapp.com"
+]

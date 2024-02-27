@@ -3,6 +3,9 @@ from django.contrib.auth.models import User
 
 from cloudinary.models import CloudinaryField
 
+
+STATUS = ((0, "Draft"), (1, "Published"))
+
 # Create your models here.
 
 class Room(models.Model):
@@ -21,3 +24,4 @@ class Room(models.Model):
     room_location = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created_on = models.DateTimeField(auto_now_add=True)
+    status = models.IntegerField(choices=STATUS, default=0)
