@@ -18,3 +18,6 @@ def add_room(request):
 def room_finder(request):
     rooms = Room.objects.all()
     return render(request, 'room_finder.html', {'rooms': rooms})
+
+def contact(request):
+    return render(request, 'contact.html')

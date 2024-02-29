@@ -27,4 +27,5 @@ urlpatterns = [
     path('about/', room_views.about, name='about'),
     path('add_room/', room_views.add_room, name='add_room'),
     path('room_finder/', room_views.room_finder, name='room_finder'),
+    path('contact/', room_views.contact, name='contact'),
 ]
