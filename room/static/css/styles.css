@@ -8,14 +8,30 @@
 
 body {
     font-family: "Roboto", sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     min-height: 100vh;
+    background-color: #02733e;
+}
+
+li, a {
+    color: #f25c05;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #f27405;
+}
+
+.logo-img {
+    width: 400px;
+    height: auto;
 }
 
 
 
 
-/* ------------------------------------------------------------ Nav bar */
+/* ------------------------------------------------------------ Theme colour */
 .theme-color-lightgreen{
     background-color: #03a64a;
 }
@@ -23,3 +39,37 @@ body {
 .theme-color-darkgreen{
     background-color: #02733e;
 }
+
+.theme-color-lightorange{
+    background-color: #f27405;
+}
+
+.theme-color-darkorange{
+    background-color: #f25c05;
+}
+.theme-color-white{
+    background-color: #f2f2f2;
+}
+
+.letter-darkgreen{
+    color: #02733e
+}
+
+.letter-darkorange{
+    color: #f25c05
+}
+
+
+/* ------------------------------------------------------------ General */
+
+hr {
+    border: 2px solid #f25c05;
+}
+
+/* ------------------------------------------------------------ Jumbotron */
+.jumbotron {
+    margin-bottom: 0;
+    border-radius: 0;
+}
+
+/* ------------------------------------------------------------ Footer */
