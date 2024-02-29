@@ -1,29 +1,26 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 <div class="container">
     <div class="row">
         {% for room in rooms %}
-            <div class="col-md-3 col-sm-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h5 class="card-title">Room Description:</h5>
-                        <p class="card-text">{{ room.room_description }}</p>
-                        <h5 class="card-title">Room Owner:</h5>
-                        <p class="card-text">{{ room.room_owner }}</p>
-                        <h5 class="card-title">Room Availability:</h5>
-                        <p class="card-text">{{ room.room_availability }}</p>
-                        <h5 class="card-title">Room Type:</h5>
-                        <p class="card-text">{{ room.get_room_type_display }}</p>
-                    </div>
-                </div>
+        <div class="card" style="width: 20rem;">
+            <img src="{% static 'images/room01.webp' %}" class="card-img-top" alt="room">
+            <div class="card-body">
+              <h5 class="card-title">Available room in: (LOCATION)</h5>
+              <p class="card-text">{{ room.room_description }}</p>
+              <p class="card-text">Owner: {{ room.room_owner }}</p>
+              <p class="card-text">{{ room.room_availability }}</p>
+              <p class="card-text">Room type: {{ room.get_room_type_display }}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
+        </div>
         {% endfor %}
     </div>
 </div>
 
 {% endblock %}
-
 
 
 
