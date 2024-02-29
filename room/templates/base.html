@@ -15,34 +15,68 @@
 <body>
     <div class="container">
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <a class="navbar-brand" href="#">RoomFinder(logo)</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'about' %}">About us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'add_room' %}">+ Add a Room</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'room_finder' %}">Find your room</a>
-                    </li>
-                </ul>
+            <div class="container">
+                <!-- Logo -->
+                <div class="col-md-3">
+                    <a class="navbar-brand" href="#">
+                        <img src="{% static 'images/logo.png' %}" class="img-fluid" alt="Responsive image">
+                    </a>
+                </div>
+        
+                <!-- Links -->
+                <div class="col-md-9">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+        
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'about' %}">About us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'add_room' %}">+ Add a Room</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'room_finder' %}">Find your room</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </nav>
 
+        {% block content %}
         <div class="jumbotron bg-color">
-            <h1 class="display-4">RoomFinder Ireland</h1>
-            <p class="lead">...helping you find your the perfect room!</p>
+            <div class="row">
+                <div class="col-md-9">
+                    <p class="display-4 text-left">RoomFinder Ireland</p>
+                    <p class="lead text-right"><strong>...helping you find the perfect room!</strong></p>
+                </div>
+            </div>
             <hr class="my-4">
-            <p>Photo</p>
+            <img src="{% static 'images/room01.webp' %}" class="img-fluid" alt="Responsive image">
         </div>
+        {% endblock %}
+        
+    </div>
+    <footer class="footer mt-auto py-3 bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <a href="#" class="text-dark mr-3">LinkedIn</a>
+                    <a href="#" class="text-dark">GitHub</a>
+                </div>
+                <div class="col-md-6 text-md-right">
+                    <p class="mb-0 text-muted">&copy; 2024 RoomFinder Ireland. Created by Amaury Junior.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- Bootstrap -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-0p/x7FJvtk5WIBddjG0srO+6z2/G4QQvhAEqzVx3q0aA0syzrJXRTb+4Ck7bDd+J" crossorigin="anonymous"></script>
 </body>
 </html>
