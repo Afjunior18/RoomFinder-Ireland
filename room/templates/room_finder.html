@@ -10,9 +10,12 @@
             <div class="card-body">
               <h5 class="card-title">Available room in: {{ room.room_location }}</h5>
               <p class="card-text">{{ room.room_description }}</p>
-              <p class="card-text">Owner: {{ room.room_owner }}</p>
-              <p class="card-text">{{ room.room_availability }}</p>
-              <p class="card-text">{{ room.get_room_type_display }} Room - $ {{ room.price }}</p>
+            </div>
+            <div class="card-footer">
+                <p class="card-text"><strong>{{ room.get_room_type_display }} Room - $ {{ room.price }}</strong></p>
+            </div>
+            <div class="card-footer">
+                <p class="card-text">Contact owner: {{ room.room_owner }} <br> Phone: {{ room.owner_phone }} <br> E-mail: {{ room.owner_email }}</p>
             </div>
             <div class="card-footer d-flex justify-content-end">
                 <a href="#" class="btn btn-primary">Go somewhere</a>
