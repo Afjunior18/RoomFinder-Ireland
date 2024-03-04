@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.core.paginator import Paginator
 
 from .models import Room
 
@@ -18,6 +19,8 @@ def add_room(request):
 def room_finder(request):
     rooms = Room.objects.all().order_by("-created_on")
     return render(request, 'room_finder.html', {'rooms': rooms})
+    paginate_by = 6
+
 
 def contact(request):
     return render(request, 'contact.html')
