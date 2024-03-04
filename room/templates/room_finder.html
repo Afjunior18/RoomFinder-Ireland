@@ -8,11 +8,11 @@
         <div class="card m-2 card-style">
             <img src="{% static 'images/room01.webp' %}" class="card-img-top" alt="room">
             <div class="card-body">
-              <h5 class="card-title">Available room in: (LOCATION)</h5>
+              <h5 class="card-title">Available room in: {{ room.room_location }}</h5>
               <p class="card-text">{{ room.room_description }}</p>
               <p class="card-text">Owner: {{ room.room_owner }}</p>
               <p class="card-text">{{ room.room_availability }}</p>
-              <p class="card-text">Room type: {{ room.get_room_type_display }}</p>
+              <p class="card-text">{{ room.get_room_type_display }} Room - $ {{ room.price }}</p>
             </div>
             <div class="card-footer d-flex justify-content-end">
                 <a href="#" class="btn btn-primary">Go somewhere</a>

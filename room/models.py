@@ -27,3 +27,9 @@ class Room(models.Model):
     status = models.IntegerField(choices=STATUS, default=0)
 
     excerpt = models.TextField(blank=True)
+
+    class Meta:
+        ordering = ["price"]
+
+    def __str__(self):
+        return f"Available Room in: {self.room_location} for only: $ {self.price}"

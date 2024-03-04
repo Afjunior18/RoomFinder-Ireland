@@ -16,7 +16,7 @@ def add_room(request):
     return render(request, 'add_room.html')
 
 def room_finder(request):
-    rooms = Room.objects.all()
+    rooms = Room.objects.all().order_by("-created_on")
     return render(request, 'room_finder.html', {'rooms': rooms})
 
 def contact(request):
