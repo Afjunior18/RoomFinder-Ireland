@@ -4,9 +4,10 @@ from .models import Room
 from django_summernote.admin import SummernoteModelAdmin
 
 
+# Added PriceRangeFilter class to enable filtering rooms by price range in admin panel.
 
 class PriceRangeFilter(admin.SimpleListFilter):
-    title = _('Price Range')
+    title = "Price Range"
     parameter_name = 'price_range'
 
     def lookups(self, request, model_admin):
@@ -28,14 +29,12 @@ class PriceRangeFilter(admin.SimpleListFilter):
             return queryset.filter(price__gt=1500)
 
 
-
-
 @admin.register(Room)
 class RoomAdmin(SummernoteModelAdmin):
 
     list_display = ('room_description', 'room_owner', 'room_availability', 'room_type', 'owner_email', 'owner_phone', 'room_location', 'price', 'created_on', 'status')
     search_fields = ['room_description', 'room_location']
-    list_filter = ('status', 'room_availability', 'room_type', PriceRangeFilter)
+    list_filter = ('status', 'created_on', 'room_type', PriceRangeFilter)
     summernote_fields = ('room_description', 'excerpt')
 
 # Register your models here.
