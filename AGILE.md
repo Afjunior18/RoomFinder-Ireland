@@ -63,6 +63,10 @@ Additionally, I verified the connectivity of these directories to ensure smooth 
 
 ### Sprint 2:
 
+Prior to commencing Sprint 2, I encountered some challenges in determining the optimal development approach, prompting me to readjust certain aspects of the planning. Over the past 10 days, my focus was on establishing the skeleton of my app, which involved creating HTML pages and connecting all functionalities. With the structure in place, I can now concentrate on the initial planning, bearing in mind that some user stories and even certain tasks from future sprints have already been completed.
+
+For this Sprint 2, my goal is to conclude by 11:00 PM on March 6th, starting today on March 5th at 10:00 AM.
+
 - Admin Story: Implement admin registration and authentication - *(5 story points)*
 
 - Implement user registration functionality - *(5 story points)*

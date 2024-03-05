@@ -28,8 +28,12 @@ def add_room(request):
 
 def room_finder(request):
     rooms = Room.objects.all().order_by("-created_on")
-    return render(request, 'room_finder.html', {'rooms': rooms})
-    paginate_by = 6
+    return render(
+        request,
+        'room_finder.html', 
+        {'rooms': rooms},
+        )
+    
 
 
 def contact(request):

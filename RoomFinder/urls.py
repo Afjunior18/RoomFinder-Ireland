@@ -22,8 +22,9 @@ from room import views as room_views
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path('about/', room_views.about, name='about'),
+    path('admin/', admin.site.urls),
+    path("accounts/", include("allauth.urls")),
     path('add_room/', room_views.add_room, name='add_room'),
     path('contact/', room_views.contact, name='contact'),
     path('room_finder/', room_views.room_finder, name='room_finder'),
