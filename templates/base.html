@@ -1,9 +1,5 @@
 {% load static %}
 
-{% url 'account_login' as login_url %}
-{% url 'account_signup' as signup_url %}
-{% url 'account_logout' as logout_url %}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -19,73 +15,56 @@
     <title>RoomFinder Ireland</title>
 </head>
 <body>
-    <div class="container theme-color-darkgreen">
-        <nav class="navbar navbar-expand-lg navbar-light theme-color-lightgreen">
-            <div class="container theme-color-lightgreen">
+    <div class="container-fluid p-0 theme-color-darkgreen">
+        <nav class="navbar navbar-expand-md navbar-light theme-color-lightgreen">
+            <div class="container-fluid theme-color-lightgreen">
                 <!-- Logo -->
-                <div class="col-md-4">
-                    <a class="navbar-brand" href="{% url 'index' %}">
-                        <img src="{% static 'images/logo.png' %}" class="img-fluid logo-img" alt="Responsive image">
-                    </a>
-                </div>
-        
-                <!-- Links -->
-                <div class="col-md-8 text-right">
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                            <!-- Link: Home -->
-                            {% if user.is_authenticated %}
-                            <!-- Link: Home -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page"
-                                    href="{% url 'index' %}">Home</a>
+                <a class="navbar-brand" href="{% url 'index' %}">
+                    <img src="{% static 'images/logo.png' %}" class="img-fluid logo-img" alt="Responsive image">
+                </a>
+
+                <!-- Button collapse for small devices-->
+
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        {% if user.is_authenticated %}
+                            <!-- Links if user is authenticated -->
+                            <li class="nav-item {% if request.path == '/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'index' %}">Home</a>
                             </li>
-                            <!-- Link: + Add a Room -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == '/add_room/' %}active{% endif %}" aria-current="page"
-                                    href="{% url 'add_room' %}">+ Add a Room</a>
+                            <li class="nav-item {% if request.path == '/add_room/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'add_room' %}">+ Add a Room</a>
                             </li>
-                            <!-- Link: Find your Room -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == '/room_finder/' %}active{% endif %}" aria-current="page"
-                                    href="{% url 'room_finder' %}">Find your Room</a>
+                            <li class="nav-item {% if request.path == '/room_finder/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'room_finder' %}">Find your Room</a>
                             </li>
-                            <!-- Link: About us -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" aria-current="page"
-                                    href="{% url 'about' %}">About us</a>
+                            <li class="nav-item {% if request.path == '/about/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'about' %}">About us</a>
                             </li>
-                            <!-- Link: Contact us -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" aria-current="page"
-                                    href="{% url 'contact' %}">Contact us</a>
+                            <li class="nav-item {% if request.path == '/contact/' %}active{% endif %}">
+                                <a class="nav-link" href="{% url 'contact' %}">Contact us</a>
                             </li>
-                            <!-- Link: Logout -->
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
-                                    href="{% url 'account_logout' %}">Logout</a>
+                                <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                             </li>
-                            {% else %}
-                            <!-- Link: Register -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
-                                    href="{% url 'account_signup' %}">Register</a>
+                        {% else %}
+                            <!-- Links if user is not authenticated -->
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_signup' %}">Register</a>
                             </li>
-                            <!-- Link: Login -->
-                            <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
-                                    href="{% url 'account_login' %}">Login</a>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{% url 'account_login' %}">Login</a>
                             </li>
-                            {% endif %}
-                        </ul>
-                    </div>
+                        {% endif %}
+                    </ul>
                 </div>
             </div>
         </nav>
-
+    </div>
         {% block content %}
 
         
