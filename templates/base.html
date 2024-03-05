@@ -19,7 +19,7 @@
             <div class="container theme-color-lightgreen">
                 <!-- Logo -->
                 <div class="col-md-4">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand" href="{% url 'index' %}">
                         <img src="{% static 'images/logo.png' %}" class="img-fluid logo-img" alt="Responsive image">
                     </a>
                 </div>
@@ -30,25 +30,26 @@
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-link">
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == home_url %}active{% endif %}" aria-current="page"
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item nav-link">
+                                <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'index' %}">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == add_room_url %}active{% endif %}" aria-current="page"
+                            <li class="nav-item nav-link">
+                                <a class="nav-link {% if request.path == '/add_room/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'add_room' %}">+ Add a Room</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == room_finder_url %}active{% endif %}" aria-current="page"
+                            <li class="nav-item nav-link">
+                                <a class="nav-link {% if request.path == '/room_finder/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'room_finder' %}">Find your Room</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link {% if request.path == about_url %}active{% endif %}" aria-current="page"
+                            <li class="nav-item nav-link">
+                                <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'about' %}">About us</a>
                             </li>
-                            <a class="nav-link {% if request.path == contact_url %}active{% endif %}" aria-current="page"
-                            href="{% url 'contact' %}">Contact us</a>
+                            <li class="nav-item nav-link">
+                                <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" aria-current="page"
+                                href="{% url 'contact' %}">Contact us</a>
                             </li>        
                         </ul>
                     </div>
