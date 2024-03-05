@@ -36,39 +36,50 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarText">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <!-- Link: Home -->
+                            {% if user.is_authenticated %}
+                            <!-- Link: Home -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == '/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'index' %}">Home</a>
                             </li>
+                            <!-- Link: + Add a Room -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == '/add_room/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'add_room' %}">+ Add a Room</a>
                             </li>
+                            <!-- Link: Find your Room -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == '/room_finder/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'room_finder' %}">Find your Room</a>
                             </li>
+                            <!-- Link: About us -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == '/about/' %}active{% endif %}" aria-current="page"
                                     href="{% url 'about' %}">About us</a>
                             </li>
+                            <!-- Link: Contact us -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == '/contact/' %}active{% endif %}" aria-current="page"
-                                href="{% url 'contact' %}">Contact us</a>
+                                    href="{% url 'contact' %}">Contact us</a>
                             </li>
-                            {% if user.is_authenticated %}
+                            <!-- Link: Logout -->
                             <li class="nav-item">
-                                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page" href="{% url 'account_logout' %}">Logout</a>
+                                <a class="nav-link {% if request.path == logout_url %}active{% endif %}" aria-current="page"
+                                    href="{% url 'account_logout' %}">Logout</a>
                             </li>
                             {% else %}
+                            <!-- Link: Register -->
                             <li class="nav-item nav-link">
                                 <a class="nav-link {% if request.path == signup_url %}active{% endif %}" aria-current="page"
                                     href="{% url 'account_signup' %}">Register</a>
                             </li>
+                            <!-- Link: Login -->
                             <li class="nav-item nav-link">
-                                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page" href="{% url 'account_login' %}">Login</a>
+                                <a class="nav-link {% if request.path == login_url %}active{% endif %}" aria-current="page"
+                                    href="{% url 'account_login' %}">Login</a>
                             </li>
-                            {% endif %}   
+                            {% endif %}
                         </ul>
                     </div>
                 </div>

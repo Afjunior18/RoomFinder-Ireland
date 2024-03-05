@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.urls import reverse
+from django.contrib.auth.decorators import login_required
 
 from .models import Room
 
@@ -8,13 +9,19 @@ from .models import Room
 # Create your views here.
 
 def index(request):
-    context = {
-        'home_url': reverse('index'),
-        'add_room_url': reverse('add_room'),
-        'room_finder_url': reverse('room_finder'),
-        'about_url': reverse('about'),
-        'contact_url': reverse('contact'),
-    }
+    if request.user.is_authenticated:
+        context = {
+            'add_room_url': reverse('add_room'),
+            'room_finder_url': reverse('room_finder'),
+            'about_url': reverse('about'),
+            'contact_url': reverse('contact'),
+        }
+    else:
+        context = {
+            'register_url': '/accounts/signup/',
+            'login_url': '/accounts/login/',
+        }
+
     return render(request, 'index.html', context)
 
 
