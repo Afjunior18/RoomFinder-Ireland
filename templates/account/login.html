@@ -1,5 +1,7 @@
 {% extends "base.html" %}
 
+{% load static %}
+
 {% load i18n %}
 {% load account socialaccount %}
 
@@ -9,25 +11,33 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <h3>{% trans "Sign In" %}</h3>
-
-            <p>{% blocktrans %}Welcome back to the code|star blog. To leave a comment or like a post, please log in. If
-                you
-                have not created an account yet, then <a class="link" href="{{ signup_url }}">sign up</a>
-                first.{% endblocktrans %}</p>
+        <!-- Image sign up -->
+        <div class="col-md-6 my-5">
+            <img src="{% static 'images/room01.webp' %}" class="img-fluid" alt="Imagem">
         </div>
-    </div>
-    <div class="row">
-        <div class="col-md-8 mt-3 offset-md-2">
-            <form class="login" method="POST" action="{% url 'account_login' %}">
-                {% csrf_token %}
-                {{ form.as_p }}
-                {% if redirect_field_value %}
-                <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-                {% endif %}
-                <button class="btn btn-signup right" type="submit">{% trans "Sign In" %}</button>
-            </form>
+        <div class="col-md-6 my-5">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="letter-lightorange">{% trans "Sign In" %}</h3>
+
+                    <p class="h6 letter-white">{% blocktrans %}Welcome back to RoomFinder Ireland! To access all features and engage with the community, log in. 
+                        If you don't have an account yet, then <a class="h5 nav-green letter-lightorange" href="{{ signup_url }}">sign up</a> first.
+                        Here you can list an available room you have or find the perfect room for you. This is the place to find your space.
+                        {% endblocktrans %}</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <form class="login h6 letter-white" method="POST" action="{% url 'account_login' %}">
+                        {% csrf_token %}
+                        {{ form.as_p }}
+                        {% if redirect_field_value %}
+                        <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+                        {% endif %}
+                        <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 </div>

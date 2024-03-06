@@ -21,6 +21,12 @@ li, a {
 
 .nav-orange:hover {
     color: #f27405;
+    text-decoration: none;
+}
+
+.nav-green:hover {
+    color: #03a64a;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -28,6 +34,27 @@ li, a {
     height: auto;
 }
 
+.custom-display-3 {
+    font-size: 1.7rem;
+}
+
+#custom-btn {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
+#custom-btn:hover {
+    color:#f27405;
+    background-color:#f2f2f2;
+    border: #f27405;
+}
+
+#custom-btn:active {
+    color: #f2f2f2 !important;
+    background-color: #f27405 !important;
+    border: #f27405 !important;
+}
 
 
 
@@ -52,11 +79,19 @@ li, a {
 }
 
 .letter-darkgreen{
-    color: #02733e
+    color: #02733e;
 }
 
 .letter-darkorange{
-    color: #f25c05
+    color: #f25c05;
+}
+
+.letter-lightorange{
+    color: #f27405;
+}
+
+.letter-white{
+    color: #f2f2f2;
 }
 
 
