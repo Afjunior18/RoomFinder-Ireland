@@ -67,6 +67,8 @@ Prior to commencing Sprint 2, I encountered some challenges in determining the o
 
 For this Sprint 2, my goal is to conclude by 11:00 PM on March 6th, starting today on March 5th at 10:00 AM.
 
+*Note: The sprint 2 was successfully completed ahead of schedule, with all tasks accomplished.*
+
 - Admin Story: Implement admin registration and authentication - *(5 story points)*
 
 - Implement user registration functionality - *(5 story points)*
