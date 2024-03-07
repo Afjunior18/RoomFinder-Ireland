@@ -81,6 +81,8 @@ For this Sprint 2, my goal is to conclude by 11:00 PM on March 6th, starting tod
 
 ### Sprint 3:
 
+For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today on March 7th at 9:00 AM.
+
 - Implement room listing creation functionality - *(8 story points)*
 
 - Develop room listing management features for users - *(8 story points)*
