@@ -1,12 +1,10 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.urls import reverse
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, user_passes_test
 
 from .models import Room
 from .forms import RoomForm
-
-
 
 
 # Create your views here.
@@ -62,4 +60,18 @@ def room_finder(request):
 
 def contact(request):
     return render(request, 'contact.html')
+
+
+@user_passes_test(lambda u: u.is_superuser)
+def approve_room(request, room_id):
+    room = get_object_or_404(Room, id=room_id)
+    room.is_pending_approval = False
+    room.save()
+    return redirect('room_finder')
+
+@user_passes_test(lambda u: u.is_superuser)
+def delete_room(request, room_id):
+    room = get_object_or_404(Room, id=room_id)
+    room.delete()
+    return redirect('room_finder')
 

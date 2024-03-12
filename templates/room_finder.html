@@ -23,6 +23,18 @@
             <div class="card-footer d-flex justify-content-end">
                 <a href="#" class="btn btn-primary">Go somewhere</a>
             </div>
+            <div class="card-footer d-flex justify-content-between">
+                {% if user.is_superuser %}
+                    <form action="{% url 'approve_room' room.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-success">Approve</button>
+                    </form>
+                    <form action="{% url 'delete_room' room.id %}" method="POST">
+                        {% csrf_token %}
+                        <button type="submit" class="btn btn-danger">Delete</button>
+                    </form>
+                {% endif %}
+            </div>
         </div>
         {% endfor %}
     </div>
