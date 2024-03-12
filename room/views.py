@@ -1,9 +1,12 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 
 from .models import Room
+from .forms import RoomForm
+
+
 
 
 # Create your views here.
@@ -28,9 +31,18 @@ def index(request):
 def about(request):
     return render(request, 'about.html')
 
-
+@login_required
 def add_room(request):
-    return render(request, 'add_room.html')
+    if request.method == 'POST':
+        form = RoomForm(request.POST)
+        if form.is_valid():
+            form.instance.room_owner = request.user
+            form.instance.owner_email = request.user
+            form.save()
+            return redirect('room_finder')
+    else:
+        form = RoomForm()
+    return render(request, 'add_room.html', {'form': form})
 
 
 def room_finder(request):

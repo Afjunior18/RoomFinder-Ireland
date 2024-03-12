@@ -34,9 +34,8 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8080-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io',
     '.herokuapp.com',
-    '8000-afjunior18-roomfinderir-y1qqy084b8a.ws-us108.gitpod.io'
+    '8000-afjunior18-roomfinderir-y1qqy084b8a.ws-eu108.gitpod.io'
 ]
 
 
