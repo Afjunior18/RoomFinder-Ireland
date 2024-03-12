@@ -56,7 +56,7 @@ class RoomAdmin(SummernoteModelAdmin):
     def approve_rooms(self, request, queryset):
         queryset.update(is_pending_approval=False)
     
-    approve_rooms.short_description = "Approve selected rooms"
+    approve_rooms.short_description = ("Approve selected rooms")
 
 
 # Register your models here.

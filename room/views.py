@@ -39,7 +39,10 @@ def add_room(request):
             room = form.save(commit=False)
             room.room_owner = request.user
             room.owner_email = request.user.email
-            room.is_pending_approval= True
+            if request.user.is_superuser:
+                room.is_pending_approval = False
+            else:
+                room.is_pending_approval = True
 
             room.save()
             
@@ -50,13 +53,11 @@ def add_room(request):
 
 
 def room_finder(request):
-    rooms = Room.objects.all().order_by("-created_on")
-    return render(
-        request,
-        'room_finder.html', 
-        {'rooms': rooms},
-        )
-    
+    if request.user.is_superuser:
+        rooms = Room.objects.all().order_by("-created_on")
+    else:
+        rooms = Room.objects.filter(is_pending_approval=False).order_by("-created_on")
+    return render(request, 'room_finder.html', {'rooms': rooms})
 
 
 def contact(request):
