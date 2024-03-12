@@ -14,13 +14,19 @@ body {
 }
 
 li, a {
-    color: #f25c05;
-    font-size: 1.2rem;
+    color: black;
+    font-size: 1 rem;
     text-decoration: none;
 }
 
 .nav-orange:hover {
     color: #f27405;
+    text-decoration: none;
+}
+
+.nav-green:hover {
+    color: #03a64a;
+    text-decoration: none;
 }
 
 .logo-img {
@@ -28,6 +34,51 @@ li, a {
     height: auto;
 }
 
+.custom-display-3 {
+    font-size: 1.7rem;
+}
+
+#custom-btn {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
+#custom-btn:hover {
+    color:#f27405;
+    background-color:#f2f2f2;
+    border: #f27405;
+}
+
+#custom-btn:active {
+    color: #f2f2f2 !important;
+    background-color: #f27405 !important;
+    border: #f27405 !important;
+}
+
+#custom-btn-delete {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
+#custom-btn-delete:hover {
+    color:#f2f2f2;
+    background-color: red;
+    border: #f27405;
+}
+
+#custom-btn-approve {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
+#custom-btn-approve:hover {
+    color:#f2f2f2;
+    background-color: #02733e;
+    border: #f27405;
+}
 
 
 
@@ -52,11 +103,19 @@ li, a {
 }
 
 .letter-darkgreen{
-    color: #02733e
+    color: #02733e;
 }
 
 .letter-darkorange{
-    color: #f25c05
+    color: #f25c05;
+}
+
+.letter-lightorange{
+    color: #f27405;
+}
+
+.letter-white{
+    color: #f2f2f2;
 }
 
 
@@ -78,3 +137,7 @@ hr {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
 }
 
+.custom-img {
+    max-width: 90%;
+    height: auto;
+}
