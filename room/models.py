@@ -29,6 +29,8 @@ class Room(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
 
+    is_pending_approval = models.BooleanField(default=True)
+
     excerpt = models.TextField(blank=True)
 
     class Meta:

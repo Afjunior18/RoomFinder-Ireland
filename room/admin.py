@@ -32,11 +32,31 @@ class PriceRangeFilter(admin.SimpleListFilter):
 @admin.register(Room)
 class RoomAdmin(SummernoteModelAdmin):
 
-    list_display = ('room_description', 'room_owner', 'room_availability', 'room_type', 'owner_email', 'owner_phone', 'room_location', 'price', 'created_on', 'status')
-    search_fields = ['room_description', 'room_location']
-    list_filter = ('status', 'created_on', 'room_type', PriceRangeFilter)
-    summernote_fields = ('room_description', 'excerpt')
+    list_display = (
+                    'room_description', 'room_owner', 'room_availability',
+                    'room_type', 'owner_email', 'owner_phone', 'room_location', 
+                    'price', 'created_on', 'is_pending_approval','status'
+                    )
+    
+    search_fields = [
+                    'room_description', 'room_location'
+                    ]
+    
+    list_filter = (
+                    'status', 'created_on', 'room_type', 'is_pending_approval', PriceRangeFilter
+                    )
+    actions = [
+                'approve_rooms'
+                ]
+    
+    summernote_fields = (
+                        'room_description', 'excerpt'
+                        )
+
+    def approve_rooms(self, request, queryset):
+        queryset.update(is_pending_approval=False)
+    
+    approve_rooms.short_description = "Approve selected rooms"
+
 
 # Register your models here.
-
-# admin.site.register(Room)

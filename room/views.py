@@ -36,9 +36,13 @@ def add_room(request):
     if request.method == 'POST':
         form = RoomForm(request.POST)
         if form.is_valid():
-            form.instance.room_owner = request.user
-            form.instance.owner_email = request.user
-            form.save()
+            room = form.save(commit=False)
+            room.room_owner = request.user
+            room.owner_email = request.user.email
+            room.is_pending_approval= True
+
+            room.save()
+            
             return redirect('room_finder')
     else:
         form = RoomForm()
