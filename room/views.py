@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.http import HttpResponse
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
+from django.contrib import messages
 
 from .models import Room
 from .forms import RoomForm
@@ -43,6 +44,11 @@ def add_room(request):
                 room.is_pending_approval = True
 
             room.save()
+
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Room submitted and awaiting approval'
+            )
             
             return redirect('room_finder')
     else:
