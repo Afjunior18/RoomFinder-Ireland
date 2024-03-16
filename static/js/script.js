@@ -15,14 +15,7 @@ const deleteConfirm = document.getElementById("deleteConfirm");
 for (let button of deleteButtons) {
     button.addEventListener("click", (e) => {
         let roomId = e.target.getAttribute("data-room-id");
-        deleteConfirm.href = `/room_finder/delete_room/${roomId}/`;
+        deleteConfirm.href = `/delete/${roomId}/`;
         deleteModal.show();
     });
 }
-
-// Add event listener to delete confirmation button
-
-deleteConfirm.addEventListener("click", (e) => {
-    e.preventDefault(); // Prevent the default action (opening the href)
-    window.location.href = deleteConfirm.href; // Navigate to the delete URL
-});

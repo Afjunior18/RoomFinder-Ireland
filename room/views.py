@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
 
+
 from .models import Room
 from .forms import RoomForm
 
@@ -77,14 +78,12 @@ def approve_room(request, room_id):
     room.save()
     return redirect('room_finder')
 
+
 @user_passes_test(lambda u: u.is_superuser)
 def delete_room(request, room_id):
     room = get_object_or_404(Room, id=room_id)
+    room.delete()
+    messages.success(request, 'Room delete succesfully!')
 
-    if request.method == 'POST':
-        room.delete()
-        messages.success(request, 'Room delete succesfully!')
-        return redirect('room_finder')
-    
-    return render(request, 'delete_room.html', {'room': room})
+    return redirect('room_finder')
 
