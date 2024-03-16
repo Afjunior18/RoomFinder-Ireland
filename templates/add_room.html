@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block content %}
 
@@ -41,6 +42,10 @@
                     <input type="text" class="form-control" id="price" name="price" required>
                     <div class="invalid-feedback">Please provide the room price.</div>
                 </div>
+                <div class="form-group">
+                    <label for="room_image">Room Photo:</label>
+                    <input type="file" class="form-control-file" id="room_image" name="room_image">
+                </div>
             </div>
         </div>
         <button id="custom-btn" class="btn btn-primary" type="submit" class="btn btn-primary">Submit</button>
@@ -58,5 +63,13 @@
     </div>
     {% endif %}
 </div>
+
+<script>
+    $(document).ready(function() {
+        $('#summernote').summernote();
+    });
+</script>
 <!-- add_room.html content ends here -->
 {% endblock %}
+
+

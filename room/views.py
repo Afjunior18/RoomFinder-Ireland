@@ -35,7 +35,7 @@ def about(request):
 @login_required
 def add_room(request):
     if request.method == 'POST':
-        form = RoomForm(request.POST)
+        form = RoomForm(request.POST, request.FILES)
         if form.is_valid():
             room = form.save(commit=False)
             room.room_owner = request.user
@@ -44,6 +44,9 @@ def add_room(request):
                 room.is_pending_approval = False
             else:
                 room.is_pending_approval = True
+
+            if 'room_image' in request.FILES:
+                room.room_image = request.FILES['room_image']
 
             room.save()
 

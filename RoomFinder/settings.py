@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY")
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
@@ -45,15 +45,18 @@ ALLOWED_HOSTS = [
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
+    'crispy_forms',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'cloudinary_storage',
     'django.contrib.sites',
     'allauth',
     'allauth.account',
     'allauth.socialaccount',
     'django_summernote',
+    'cloudinary',
     'room',
 ]
 
@@ -155,7 +158,7 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Cloudinary, storage images
 
-CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', 'cloudinary://452764376732519:vKBrQ6fjHwFxaIs2kk4vk9ypfsU@dnijabg52')
+# CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', 'cloudinary://452764376732519:vKBrQ6fjHwFxaIs2kk4vk9ypfsU@dnijabg52')
 
 
 # Default primary key field type
@@ -165,5 +168,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
-    "https://*.herokuapp.com"
+    "https://*.herokuapp.com",
+    "https://8000-afjunior18-roomfinderir-y1qqy084b8a.ws-eu110.gitpod.io"
 ]

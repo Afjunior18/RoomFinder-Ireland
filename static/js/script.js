@@ -19,3 +19,17 @@ for (let button of deleteButtons) {
         deleteModal.show();
     });
 }
+
+
+
+
+const nextPhotoButton = document.querySelector(".carousel-control-next");
+const previousPhotoButton = document.querySelector(".carousel-control-prev");
+const carousel = document.querySelector("#carouselExampleCaptions");
+
+nextPhotoButton.addEventListener("click", function() {
+    carousel.querySelector(".carousel-item.active").nextElementSibling.click();
+});
+
+previousPhotoButton.addEventListener("click", function() {
+    carousel.querySelector(".carousel-item.active").previousElementSibling.click();

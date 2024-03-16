@@ -7,8 +7,16 @@
 <div class="container">
     <div class="row justify-content-center">
         {% for room in rooms %}
-        <div class="card m-2 card-style">
-            <img src="{% static 'images/room01.webp' %}" class="card-img-top" alt="room">
+        <div class="card m-2 card-style">            
+            <div class="image-container">
+                {% if "placeholder" in room.room_image.url %}
+                <img class="card-img-top" src="{% static 'images/room01.webp' %}"
+                  alt="placeholder image">
+                {% else %}
+                <img class="card-img-top" src=" {{ room.room_image.url }}"
+                  alt="room">
+                {% endif %} 
+            </div>
             <div class="card-body">
               <h5 class="card-title">Available room in: {{ room.room_location }}</h5>
               <p class="card-text">{{ room.room_description }}</p>

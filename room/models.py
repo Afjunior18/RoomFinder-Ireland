@@ -23,7 +23,8 @@ class Room(models.Model):
     owner_email = models.EmailField(max_length=250)
     owner_phone = models.CharField(max_length=20)
 
-    # room_photos = CloudinaryField('image')
+    room_image = CloudinaryField('image', default='placeholder')
+
     room_location = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created_on = models.DateTimeField(auto_now_add=True)
