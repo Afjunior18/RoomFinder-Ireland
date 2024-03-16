@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.http import HttpResponse, HttpResponseRedirect
+from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
@@ -30,6 +30,7 @@ def index(request):
 
 def about(request):
     return render(request, 'about.html')
+
 
 @login_required
 def add_room(request):
@@ -79,11 +80,13 @@ def approve_room(request, room_id):
     return redirect('room_finder')
 
 
-@user_passes_test(lambda u: u.is_superuser)
+@login_required
 def delete_room(request, room_id):
     room = get_object_or_404(Room, id=room_id)
-    room.delete()
-    messages.success(request, 'Room delete succesfully!')
+
+    if request.user == room.room_owner or request.user.is_superuser:
+        room.delete()
+        messages.success(request, 'Room delete succesfully!')
 
     return redirect('room_finder')
 
