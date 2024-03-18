@@ -11,7 +11,7 @@
   <div class="row">
     <!-- Image sign up -->
     <div class="col-md-6 d-flex justify-content-center my-5">
-      <img src="{% static 'images/room01.webp' %}" class="img-fluid" alt="Imagem">
+      <img src="{% static 'images/photo-register.png' %}" class="img-fluid" alt="Imagem">
     </div>
 
     <!-- Content sign up -->
@@ -20,7 +20,7 @@
         <div class="col-md-12">
           <h3 class="letter-lightorange">{% trans "Sign Up" %}</h3>
 
-          <p class="h6 letter-white">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
+          <p class="h6 letter-white mb-4">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
             href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
 
           <form class="signup h6 letter-white" id="signup_form" method="post" action="{% url 'account_signup' %}">

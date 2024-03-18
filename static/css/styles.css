@@ -13,10 +13,20 @@ body {
     background-color: #02733e;
 }
 
-li, a {
+/* li, a {
     color: black;
     font-size: 1 rem;
     text-decoration: none;
+} */
+
+/* ------------------------------------------------------------ Nav bar */
+.navbar-nav .nav-link {
+    color: #02733e;
+    font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f25c05;
 }
 
 .nav-orange:hover {
@@ -38,6 +48,7 @@ li, a {
     font-size: 1.7rem;
 }
 
+/* ------------------------------------------------------------ buttons */
 #custom-btn {
     color:#f2f2f2;
     background-color: #f27405;
@@ -79,7 +90,6 @@ li, a {
     background-color: #02733e;
     border: #f27405;
 }
-
 
 
 /* ------------------------------------------------------------ Theme colour */
@@ -125,6 +135,29 @@ hr {
     border: 2px solid #f25c05;
 }
 
+.custom-color-white {
+    color: #f2f2f2;
+}
+
+.custom-link {
+    color: #f2f2f2;
+}
+
+.custom-link:hover {
+    text-decoration: none;
+    color:#f27405;
+}
+
+.custom-padding {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.custom-padding-top-bottom {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
 /* ------------------------------------------------------------ Jumbotron */
 .jumbotron {
     margin-bottom: 0;
@@ -142,10 +175,11 @@ hr {
     height: auto;
 }
 
-/* ------------------------------------------------------------ Carrosel Index page */
+/* ------------------------------------------------------------ Carousel Index page */
 
 .carousel-item img {
     height: auto;
     width: 100%;
-    border-radius: 3%;
+    border-bottom: 10px solid #f25c05;
+    border-top: 10px solid #f25c05;
 }

@@ -5,8 +5,8 @@
 
 <!-- add_room.html content starts here -->
 
-<div class="container">
-    <h1>+ Add a Room</h1>
+<div class="container theme-color-lightgreen mt-4 mb-4 custom-padding-top-bottom custom-padding">
+    <h1 class="letter-darkgreen">+ Add a Room</h1>
     <form method="POST" action="{% url 'add_room' %}" class="needs-validation" novalidate>
         {% csrf_token %}
         <div class="row">
