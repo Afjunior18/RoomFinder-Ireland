@@ -29,6 +29,7 @@ urlpatterns = [
     path('approve/<int:room_id>/', views.approve_room, name='approve_room'),
     path('contact/', room_views.contact, name='contact'),
     path('delete/<int:room_id>/', views.delete_room, name='delete_room'),
+    path('edit/<int:room_id>/', views.edit_room, name='edit_room'),
     path('room_finder/', room_views.room_finder, name='room_finder'),
     path('summernote/', include('django_summernote.urls')),
     path('', room_views.index, name='index'),

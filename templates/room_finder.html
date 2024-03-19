@@ -36,9 +36,12 @@
                     </form>
                     <!-- Button for Delete -->
                     <button class="btn btn-danger btn-delete" data-room-id="{{ room.id }}" data-toggle="modal" data-target="#confirmDeleteModal">Delete</button>
+                    <!-- Button for Edit -->
+                    <button class="btn btn-outline-success btn-edit" type="button" data-room-id="{{ room.id }}">Edit</button>
                 {% elif user.is_authenticated and user == room.room_owner %}
                     <!-- Button for Delete -->
                     <button class="btn btn-danger btn-delete" data-room-id="{{ room.id }}" data-toggle="modal" data-target="#confirmDeleteModal">Delete</button>
+                    <button class="btn btn-outline-success btn-edit" type="button" data-room-id="{{ room.id }}">Edit</button>
                 {% endif %}
             </div>
         </div>

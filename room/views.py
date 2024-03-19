@@ -93,3 +93,16 @@ def delete_room(request, room_id):
 
     return redirect('room_finder')
 
+@login_required
+def edit_room(request, room_id):
+    room = get_object_or_404(Room, id=room_id)
+    form = RoomForm(instance=room)
+
+    if request.method == 'POST':
+        form = RoomForm(request.POST, request.FILES, instance=room)
+        if form.is_valid():
+            room = form.save(commit=False)
+            room.save()
+            return redirect('room_finder')
+
+    return render(request, 'edit_room.html', {'form':form, 'room':room})
