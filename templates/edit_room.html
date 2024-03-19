@@ -8,34 +8,36 @@
                 <div class="card-header">
                     <h1 class="letter-darkgreen">Edit Room</h1>
                 </div>
-                <div class="card-body letter-darkgreen">
+                <div class="card-body letter-darkgreen d-flex justify-content-center">
                     <form method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">
-                            {{ form.room_image.label_tag }}
+                            <label for="room_image" class="form-label-input">{{ form.room_image.label }}</label>
                             {{ form.room_image }}
                         </div>
                         <div class="mb-3">
-                            {{ form.room_description.label_tag }}<br>
+                            <label for="room_description" class="form-label-input">{{ form.room_description.label }}</label><br>
                             {{ form.room_description }}
                         </div>
                         <div class="mb-3">
-                            {{ form.owner_phone.label_tag }}
+                            <label for="owner_phone" class="form-label-input">{{ form.owner_phone.label }}</label>
                             {{ form.owner_phone }}
                         </div>
                         <div class="mb-3">
-                            {{ form.room_type.label_tag }}
+                            <label for="room_type" class="form-label-input">{{ form.room_type.label }}</label>
                             {{ form.room_type }}
                         </div>
                         <div class="mb-3">
-                            {{ form.room_location.label_tag }}
+                            <label for="room_location" class="form-label-input">{{ form.room_location.label }}</label>
                             {{ form.room_location }}
                         </div>
                         <div class="mb-3">
-                            {{ form.price.label_tag }}
+                            <label for="price" class="form-label-input">{{ form.price.label }}</label>
                             {{ form.price }}
                         </div>
-                        <button type="submit" id="custom-btn" class="btn btn-primary">Save Changes</button>
+                        <div class="d-flex justify-content-center">
+                            <button type="submit" id="custom-btn" class="btn btn-primary">Save Changes</button>
+                        </div>
                     </form>
                 </div>
             </div>

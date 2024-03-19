@@ -158,6 +158,14 @@ hr {
     padding-bottom: 20px;
 }
 
+.form-label-input {
+    width: 100%;
+}
+
+input {
+    width: 100%;
+}
+
 /* ------------------------------------------------------------ Jumbotron */
 .jumbotron {
     margin-bottom: 0;
