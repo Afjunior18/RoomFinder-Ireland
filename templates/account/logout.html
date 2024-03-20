@@ -7,27 +7,29 @@
 {% block head_title %}{% trans "Sign Out" %}{% endblock %}
 
 {% block content %}
-<div class="container">
+<div class="container theme-color-lightgreen rounded-lg shadow-lg mt-4 mb-4 custom-padding-top-bottom custom-padding">
     <div class="row">
       <!-- Image -->
-      <div class="col-md-6 my-5 d-flex justify-content-center">
-        <img src="{% static 'images/logout-photo.png' %}" class="img-fluid" alt="Imagem">
+      <div class="col-md-8 my-5 d-flex justify-content-center">
+        <img src="{% static 'images/logout-photo.png' %}" class="img-fluid rounded-circle" alt="Imagem">
       </div>
   
       <!-- Content -->
-      <div class="col-md-6 my-5 d-flex align-items-center">
-        <div class="text-justify p-4">
-          <h3 class="letter-lightorange mb-3">{% trans "Sign Out" %}</h3>
-  
-          <p class="h6 letter-white mb-4">{% trans 'Are you sure you want to sign out?' %}</p>
-  
-          <form method="post" action="{% url 'account_logout' %}">
-            {% csrf_token %}
-            {% if redirect_field_value %}
-            <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
-            {% endif %}
-            <button id="custom-btn" class="btn btn-primary" type="submit">{% trans 'Sign Out' %}</button>
-          </form>
+      <div class="col-md-4 my-5 d-flex align-items-center">
+        <div class="text-justify p-4 bg-light rounded-lg shadow-lg">
+          <div class="d-flex justify-content-center">
+            <h3 class="letter-lightorange mb-3">{% trans "Sign Out" %}</h3>
+          </div>
+          <p class="h6 letter-darkgreen mb-4">{% trans 'Are you sure you want to sign out?' %}</p>
+          <div class="d-flex justify-content-center">
+            <form method="post" action="{% url 'account_logout' %}">
+              {% csrf_token %}
+              {% if redirect_field_value %}
+              <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
+              {% endif %}
+              <button id="custom-btn" class="btn btn-primary" type="submit">{% trans 'Sign Out' %}</button>
+            </form>
+          </div>
         </div>
       </div>
     </div>

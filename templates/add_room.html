@@ -5,14 +5,14 @@
 
 <!-- add_room.html content starts here -->
 
-<div class="container theme-color-lightgreen mt-4 mb-4 custom-padding-top-bottom custom-padding">
+<div class="container theme-color-lightgreen mt-4 mb-4 custom-padding-top-bottom custom-padding rounded-lg shadow-lg">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card mt-4 mb-4">
                 <div class="card-header">
                     <h1 class="letter-darkgreen">+ Add a Room</h1>
                 </div>
-                <div class="card-body letter-darkgreen d-flex justify-content-center">
+                <div class="card-body letter-darkgreen d-flex justify-content-center rounded-lg shadow-lg">
                     <form method="POST" action="{% url 'add_room' %}" class="needs-validation" novalidate enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">

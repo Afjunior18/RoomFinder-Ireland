@@ -16,7 +16,6 @@ def index(request):
         context = {
             'add_room_url': reverse('add_room'),
             'room_finder_url': reverse('room_finder'),
-            'about_url': reverse('about'),
             'contact_url': reverse('contact'),
         }
     else:
@@ -26,10 +25,6 @@ def index(request):
         }
 
     return render(request, 'index.html', context)
-
-
-def about(request):
-    return render(request, 'about.html')
 
 
 @login_required
