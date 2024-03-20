@@ -80,6 +80,7 @@ def approve_room(request, room_id):
     room = get_object_or_404(Room, id=room_id)
     room.is_pending_approval = False
     room.save()
+    messages.success(request, 'Room approved successfully.')
     return redirect('room_finder')
 
 
@@ -101,7 +102,9 @@ def edit_room(request, room_id):
     if request.method == 'POST':
         form = RoomForm(request.POST, request.FILES, instance=room)
         if form.is_valid():
-            room = form.save(commit=False)
+            if not room.is_pending_approval:
+                room.is_pending_approval = True
+                messages.success(request, 'Room edited successfully and is pending approval.')
             room.save()
             return redirect('room_finder')
 
