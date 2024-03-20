@@ -54,6 +54,9 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{% url 'account_logout' %}">Logout</a>
                             </li>
+                            <span class="alert-success px-1 pt-2 mt-1 rounded-lg shadow-lg">
+                                You're logged in as <strong>{{ request.user }}</strong>
+                            </span>
                         {% else %}
                             <!-- Links if user is not authenticated -->
                             <li class="nav-item">
@@ -65,9 +68,6 @@
                         {% endif %}
                     </ul>
                 </div>
-                <span class="alert-success px-2 py-1">
-                    You're logged in as <strong>{{ request.user }}</strong>
-                </span>
             </div>
         </nav>
     </div>
