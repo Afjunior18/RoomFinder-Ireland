@@ -9,32 +9,34 @@
 
 {% block content %}
 
-<div class="container">
-    <div class="row">
+<div class="container theme-color-lightgreen">
+    <div class="row custom-padding-top-bottom mt-5 mb-5 custom-padding">
         <!-- Image sign up -->
         <div class="col-md-6 my-5">
-            <img src="{% static 'images/login-photo.png' %}" class="img-fluid" alt="Imagem">
+            <img src="{% static 'images/login-photo.png' %}" class="img-fluid rounded-circle" alt="Imagem">
         </div>
         <div class="col-md-6 my-5">
             <div class="row">
                 <div class="col-md-12">
-                    <h3 class="letter-lightorange mt-2">{% trans "Sign In" %}</h3>
+                    <h5 class="letter-darkorange"><strong>{% trans "Sign In" %}</strong></h5>
 
-                    <p class="h6 letter-white mb-5">{% blocktrans %}Welcome back to RoomFinder Ireland! To access all features and engage with the community, log in. 
-                        If you don't have an account yet, then <a class="h5 nav-green letter-lightorange" href="{{ signup_url }}">sign up</a> first.
+                    <p class="h6 letter-white mb-2">{% blocktrans %}Welcome back to <strong><span class="letter-darkgreen">RoomFinder <span class="letter-darkorange">Ireland!</span></span></strong> To access all features and engage with the community, log in. 
+                        If you don't have an account yet, then <strong><a class="nav-green letter-darkorange" href="{{ signup_url }}">"sign up"</a> </strong> first.
                         Here you can list an available room you have or find the perfect room for you. This is the place to find your space.
                         {% endblocktrans %}</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-12">
+                <div class="col-md-6">
                     <form class="login h6 letter-white" method="POST" action="{% url 'account_login' %}">
                         {% csrf_token %}
                         {{ form.as_p }}
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+                        <div class="d-flex justify-content-center mt-5">
+                            <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
+                        </div>
                     </form>
                 </div>
             </div>

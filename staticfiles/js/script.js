@@ -10,6 +10,11 @@ const deleteModal = new bootstrap.Modal(document.getElementById("deleteModal"));
 const deleteButtons = document.getElementsByClassName("btn-delete");
 const deleteConfirm = document.getElementById("deleteConfirm");
 
+// Button Edit
+
+const editButtons = document.querySelectorAll(".btn-edit");
+
+
 // Add event listener to delete button
 
 for (let button of deleteButtons) {
@@ -20,16 +25,11 @@ for (let button of deleteButtons) {
     });
 }
 
+// Add event listener to Edit button
 
-
-
-const nextPhotoButton = document.querySelector(".carousel-control-next");
-const previousPhotoButton = document.querySelector(".carousel-control-prev");
-const carousel = document.querySelector("#carouselExampleCaptions");
-
-nextPhotoButton.addEventListener("click", function() {
-    carousel.querySelector(".carousel-item.active").nextElementSibling.click();
+editButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const roomId = button.getAttribute('data-room-id');
+        window.location.href = `/edit/${roomId}/`;
+    });
 });
-
-previousPhotoButton.addEventListener("click", function() {
-    carousel.querySelector(".carousel-item.active").previousElementSibling.click();

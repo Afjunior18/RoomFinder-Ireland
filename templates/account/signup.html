@@ -7,11 +7,11 @@
 {% block head_title %}{% trans "Signup" %}{% endblock head_title %}
 
 {% block content %}
-<div class="container">
-  <div class="row">
+<div class="container theme-color-lightgreen">
+  <div class="row border custom-padding-top-bottom mt-5 mb-5 custom-padding">
     <!-- Image sign up -->
     <div class="col-md-6 d-flex justify-content-center my-5">
-      <img src="{% static 'images/photo-register.png' %}" class="img-fluid" alt="Imagem">
+      <img src="{% static 'images/photo-register.png' %}" class="img-fluid rounded-circle" alt="Imagem">
     </div>
 
     <!-- Content sign up -->
@@ -20,8 +20,8 @@
         <div class="col-md-12">
           <h3 class="letter-lightorange">{% trans "Sign Up" %}</h3>
 
-          <p class="h6 letter-white mb-4">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
-            href="{{ login_url }}">sign in</a>.{% endblocktrans %}</p>
+          <p class="letter-white mb-1">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
+            href="{{ login_url }}">"sign in"</a>.{% endblocktrans %}</p>
 
           <form class="signup h6 letter-white" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
@@ -29,7 +29,9 @@
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
+            <div class="d-flex justify-content-center mt-5">
+              <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
+            </div>
           </form>
         </div>
       </div>
