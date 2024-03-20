@@ -8,28 +8,28 @@
 
 {% block content %}
 <div class="container theme-color-lightgreen">
-  <div class="row border custom-padding-top-bottom mt-5 mb-5 custom-padding">
+  <div class="row rounded-lg shadow-lg custom-padding-top-bottom mt-5 mb-5 custom-padding">
     <!-- Image sign up -->
     <div class="col-md-6 d-flex justify-content-center my-5">
-      <img src="{% static 'images/photo-register.png' %}" class="img-fluid rounded-circle" alt="Imagem">
+      <img src="{% static 'images/photo-register.png' %}" class="img-fluid rounded-circle rounded-lg shadow-lg" alt="Imagem">
     </div>
 
     <!-- Content sign up -->
-    <div class="col-md-6 my-5">
+    <div class="col-md-6 my-5 bg-light">
       <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-12 mt-4">
           <h3 class="letter-lightorange">{% trans "Sign Up" %}</h3>
 
-          <p class="letter-white mb-1">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
+          <p class="letter-darkgreen mb-1">{% blocktrans %}Already have an account? Then please <a class="h5 nav-green letter-lightorange" 
             href="{{ login_url }}">"sign in"</a>.{% endblocktrans %}</p>
 
-          <form class="signup h6 letter-white" id="signup_form" method="post" action="{% url 'account_signup' %}">
+          <form class="signup h6 letter-darkgreen" id="signup_form" method="post" action="{% url 'account_signup' %}">
             {% csrf_token %}
             {{ form.as_p }}
             {% if redirect_field_value %}
             <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
             {% endif %}
-            <div class="d-flex justify-content-center mt-5">
+            <div class="d-flex justify-content-center mt-5 mb-5">
               <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign Up" %} &raquo;</button>
             </div>
           </form>

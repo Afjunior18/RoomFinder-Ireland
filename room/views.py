@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect, Http404
 from django.urls import reverse
 from django.contrib.auth.decorators import login_required, user_passes_test
 from django.contrib import messages
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 
 
 from .models import Room
@@ -63,6 +64,7 @@ def room_finder(request):
         rooms = Room.objects.all().order_by("-created_on")
     else:
         rooms = Room.objects.filter(is_pending_approval=False).order_by("-created_on")
+
     return render(request, 'room_finder.html', {'rooms': rooms})
 
 
