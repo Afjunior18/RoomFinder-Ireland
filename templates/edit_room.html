@@ -22,6 +22,11 @@
                         <div class="mb-3">
                             <label for="owner_phone" class="form-label-input">{{ form.owner_phone.label }}</label>
                             {{ form.owner_phone }}
+                            <small class="form-text text-muted">Please enter your phone number in the format +areacodexxxxxxxxx.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="owner_email" class="form-label-input">{{ form.owner_email.label }}</label>
+                            {{ form.owner_email }}
                         </div>
                         <div class="mb-3">
                             <label for="room_type" class="form-label-input">{{ form.room_type.label }}</label>
@@ -41,6 +46,18 @@
                     </form>
                 </div>
             </div>
+            {% if form.errors %}
+            <div class="alert alert-danger mt-3">
+                <strong>Error:</strong> Please correct the following errors:
+                <ul>
+                    {% for field, error_list in form.errors.items %}
+                    {% for error in error_list %}
+                    <li>{{ field|title }}: {{ error }}</li>
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
         </div>
     </div>
 </div>

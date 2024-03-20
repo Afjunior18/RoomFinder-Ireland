@@ -1,10 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import User
+from django.core.validators import MinLengthValidator
 
 from cloudinary.models import CloudinaryField
 
-
-STATUS = ((0, "Draft"), (1, "Published"))
 
 # Create your models here.
 
@@ -20,19 +19,16 @@ class Room(models.Model):
     ]
     room_type = models.CharField(max_length=2, choices=ROOM_TYPES)
 
-    owner_email = models.EmailField(max_length=250)
-    owner_phone = models.CharField(max_length=20)
+    owner_email = models.EmailField(max_length=200)
+    owner_phone = models.CharField(max_length=15, validators=[MinLengthValidator(10)])
 
     room_image = CloudinaryField('image', default='placeholder')
 
-    room_location = models.CharField(max_length=100)
+    room_location = models.CharField(max_length=20)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     created_on = models.DateTimeField(auto_now_add=True)
-    status = models.IntegerField(choices=STATUS, default=0)
 
     is_pending_approval = models.BooleanField(default=True)
-
-    excerpt = models.TextField(blank=True)
 
     class Meta:
         ordering = ["price"]

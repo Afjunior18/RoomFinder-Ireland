@@ -26,6 +26,11 @@
                         <div class="mb-3">
                             <label for="owner_phone" class="form-label-input">{{ form.owner_phone.label }}</label>
                             {{ form.owner_phone }}
+                            <small class="form-text text-muted">Please enter your phone number in the format +areacodexxxxxxxxx.</small>
+                        </div>
+                        <div class="mb-3">
+                            <label for="owner_email" class="form-label-input">{{ form.owner_email.label }}</label>
+                            {{ form.owner_email }}
                         </div>
                         <div class="mb-3">
                             <label for="room_type" class="form-label-input">{{ form.room_type.label }}</label>
@@ -42,7 +47,6 @@
                         <div class="d-flex justify-content-center">
                             <button type="submit" id="custom-btn" class="btn btn-primary">Submit</button>
                         </div>
-                        
                     </form>
                 </div>
             </div>

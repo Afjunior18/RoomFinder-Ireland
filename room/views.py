@@ -54,6 +54,7 @@ def add_room(request):
             )
             
             return redirect('room_finder')
+            
     else:
         form = RoomForm()
     return render(request, 'add_room.html', {'form': form})
