@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Noto+Sans:wght@100&family=Permanent+Marker&family=Roboto&display=swap')
 
+/* Removing default margins, paddings and borders */
 * {
     margin: 0;
     padding: 0;
@@ -12,12 +13,6 @@ body {
     min-height: 100vh;
     background-color: #02733e;
 }
-
-/* li, a {
-    color: black;
-    font-size: 1 rem;
-    text-decoration: none;
-} */
 
 /* ------------------------------------------------------------ Nav bar */
 .navbar-nav .nav-link {
@@ -91,8 +86,7 @@ body {
     border: #f27405;
 }
 
-
-/* ------------------------------------------------------------ Theme colour */
+/* ------------------------------------------------------ Theme colour */
 .theme-color-lightgreen{
     background-color: #03a64a;
 }
@@ -128,8 +122,7 @@ body {
     color: #f2f2f2;
 }
 
-
-/* ------------------------------------------------------------ General */
+/* ---------------------------------------------------------- General */
 
 hr {
     border: 2px solid #f25c05;
@@ -166,13 +159,27 @@ input {
     width: 100%;
 }
 
-/* ------------------------------------------------------------ Jumbotron */
+/* ------------------------------------------------ custom inputs */
+
+#id_room_description{
+    border: 1px solid black;
+}
+
+#id_room_type {
+    border: 1px solid black;
+}
+
+input {
+    border: 1px solid black;
+}
+
+/* ----------------------------------------------------- Jumbotron */
 .jumbotron {
     margin-bottom: 0;
     border-radius: 0;
 }
 
-/* ------------------------------------------------------------ Card */
+/* ---------------------------------------------------------- Card */
 .card-style{
     width: 22rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.9);
@@ -183,7 +190,7 @@ input {
     height: auto;
 }
 
-/* ------------------------------------------------------------ Carousel Index page */
+/* -------------------------------------------- Carousel Index page */
 
 .carousel-inner{
     width: 65%;
@@ -194,4 +201,121 @@ input {
     width: 100%;
     border-bottom: 10px solid #f25c05;
     border-top: 10px solid #f25c05;
+}
+
+/* --------------------------------------------- Media query Section */
+
+/* For sreeen sizes from 1267px wide and down*/
+
+@media screen and (max-width:1266px){
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1.2rem;
+    }
+}
+
+/* For sreeen sizes from 1227px wide and down*/
+
+@media screen and (max-width:1227px){
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+
+    .display-3 {
+        font-size: 4rem;
+    }
+
+}
+
+/* For sreeen sizes from 1150px wide and down*/
+
+@media screen and (max-width:1150px){
+
+    .navbar-nav .nav-link {
+        font-size: 0.8rem;
+    }
+
+    .display-3 {
+        font-size: 3.5rem;
+    }
+
+}
+
+/* For sreeen sizes from 820px wide and down*/
+
+@media screen and (max-width:820px){
+
+    .navbar-nav .nav-link {
+        font-size: 0.7rem;
+    }
+
+    ul, span {
+        font-size: 0.6rem;
+    }
+
+    .text-roomfinder {
+        font-size: 2.5rem
+    }
+
+}
+
+/* For sreeen sizes from 767px wide and down*/
+
+@media screen and (max-width:767px){
+
+    #id_room_description {
+        width: 100%;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+    }
+
+    ul, span {
+        font-size: 0.8rem;
+        padding-bottom: 10px;
+    }
+
+}
+
+/* For sreeen sizes from 425px wide and down*/
+
+@media screen and (max-width:425px){
+
+    .text-roomfinder {
+        font-size: 1.7rem;
+    }
+
+    .custom-display-3 {
+        font-size: 1.2rem;
+    }
+
+    .custom-align {
+        display: flex;
+        justify-content: center;
+    }
+
+}
+
+/* For sreeen sizes from 320px wide and down */
+
+@media screen and (max-width:320px) {
+
+    h1 {
+        font-size: 1.3rem;
+    }
+
+    .text-roomfinder {
+        font-size: 1.4rem
+    }
+
+    .custom-display-3 {
+        font-size: 1rem;
+    }
+
 }

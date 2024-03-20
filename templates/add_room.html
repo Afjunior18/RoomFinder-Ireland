@@ -13,7 +13,7 @@
                     <h1 class="letter-darkgreen">+ Add a Room</h1>
                 </div>
                 <div class="card-body letter-darkgreen d-flex justify-content-center rounded-lg shadow-lg">
-                    <form method="POST" action="{% url 'add_room' %}" class="needs-validation" novalidate enctype="multipart/form-data">
+                    <form method="POST" action="{% url 'add_room' %}" class="needs-validation col-12" novalidate enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">
                             <label for="room_image" class="form-label-input">{{ form.room_image.label }}</label>
