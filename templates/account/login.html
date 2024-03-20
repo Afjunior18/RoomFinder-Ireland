@@ -9,7 +9,7 @@
 
 {% block content %}
 
-<div class="container theme-color-lightgreen">
+<div class="container theme-color-lightgreen rounded-lg shadow-lg">
     <div class="row custom-padding-top-bottom mt-5 mb-5 custom-padding rounded-lg shadow-lg">
         <!-- Image sign up -->
         <div class="col-md-6 my-5 d-flex justify-content-center">
@@ -34,7 +34,7 @@
                         {% if redirect_field_value %}
                         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
                         {% endif %}
-                        <div class="d-flex justify-content-center mt-5">
+                        <div class="d-flex justify-content-center mt-5 mb-5">
                             <button id="custom-btn" class="btn btn-primary" type="submit">{% trans "Sign In" %}</button>
                         </div>
                     </form>

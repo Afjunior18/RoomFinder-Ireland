@@ -185,6 +185,10 @@ input {
 
 /* ------------------------------------------------------------ Carousel Index page */
 
+.carousel-inner{
+    width: 65%;
+    height: 30%;
+}
 .carousel-item img {
     height: auto;
     width: 100%;
