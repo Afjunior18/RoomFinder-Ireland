@@ -23,7 +23,7 @@
 <body>
     <div class="container-fluid p-0 theme-color-darkgreen">
         <nav class="navbar navbar-expand-md navbar-light theme-color-lightgreen">
-            <div class="container-fluid theme-color-lightgreen">
+            <div class="container-fluid theme-color-lightgreen text-center">
                 <!-- Logo -->
                 <a class="navbar-brand" href="{% url 'index' %}">
                     <img src="{% static 'images/logo.png' %}" class="img-fluid logo-img" alt="Responsive image">
@@ -65,6 +65,9 @@
                         {% endif %}
                     </ul>
                 </div>
+                <span class="alert-success px-2 py-1">
+                    You're logged in as <strong>{{ request.user }}</strong>
+                </span>
             </div>
         </nav>
     </div>
