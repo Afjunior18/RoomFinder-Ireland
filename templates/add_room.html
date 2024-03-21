@@ -16,32 +16,32 @@
                     <form method="POST" action="{% url 'add_room' %}" class="needs-validation col-12" novalidate enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="mb-3">
-                            <label for="room_image" class="form-label-input">{{ form.room_image.label }}</label>
+                            <label for="room_image" class="form-label-input">{{ form.room_image.label }} <i class="fa-solid fa-image"></i></label>
                             {{ form.room_image }}
                         </div>
                         <div class="mb-3">
-                            <label for="room_description" class="form-label-input">{{ form.room_description.label }}</label><br>
+                            <label for="room_description" class="form-label-input">{{ form.room_description.label }} <i class="fa-solid fa-circle-info"></i></label><br>
                             {{ form.room_description }}
                         </div>
                         <div class="mb-3">
-                            <label for="owner_phone" class="form-label-input">{{ form.owner_phone.label }}</label>
+                            <label for="owner_phone" class="form-label-input">{{ form.owner_phone.label }} <i class="fa-solid fa-phone"></i></label>
                             {{ form.owner_phone }}
                             <small class="form-text text-muted">Please enter your phone number in the format +areacodexxxxxxxxx.</small>
                         </div>
                         <div class="mb-3">
-                            <label for="owner_email" class="form-label-input">{{ form.owner_email.label }}</label>
+                            <label for="owner_email" class="form-label-input">{{ form.owner_email.label }} <i class="fa-solid fa-envelope"></i></label>
                             {{ form.owner_email }}
                         </div>
                         <div class="mb-3">
-                            <label for="room_type" class="form-label-input">{{ form.room_type.label }}</label>
+                            <label for="room_type" class="form-label-input">{{ form.room_type.label }} <i class="fa-solid fa-check"></i></label>
                             {{ form.room_type }}
                         </div>
                         <div class="mb-3">
-                            <label for="room_location" class="form-label-input">{{ form.room_location.label }}</label>
+                            <label for="room_location" class="form-label-input">{{ form.room_location.label }} <i class="fa-solid fa-location-dot"></i></label>
                             {{ form.room_location }}
                         </div>
                         <div class="mb-3">
-                            <label for="price" class="form-label-input">{{ form.price.label }}</label>
+                            <label for="price" class="form-label-input">{{ form.price.label }} <i class="fa-solid fa-euro-sign"></i></label>
                             {{ form.price }}
                         </div>
                         <div class="d-flex justify-content-center">

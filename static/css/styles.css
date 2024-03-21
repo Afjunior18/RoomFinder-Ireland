@@ -7,11 +7,38 @@
     box-sizing: border-box;
 }
 
+/* smooth scrolling behavior to the HTML document */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.nav-link {
+    text-transform: uppercase;
+}
+
+.custom-fa-regular {
+    font-size: 1.5rem;
+    color: #02733e;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     font-size: 1rem;
     min-height: 100vh;
     background-color: #02733e;
+}
+
+.footer-stickp-custom {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f2f2f2;
+    padding: 20px;
 }
 
 /* ------------------------------------------------------------ Nav bar */
@@ -52,7 +79,7 @@ body {
 
 #custom-btn:hover {
     color:#f27405;
-    background-color:#f2f2f2;
+    background-color:#03a64a;
     border: #f27405;
 }
 
@@ -144,6 +171,10 @@ hr {
 .custom-padding {
     padding-left: 20px;
     padding-right: 20px;
+}
+
+.custom-margin-top {
+    margin-top: 150px;
 }
 
 .custom-padding-top-bottom {
@@ -300,6 +331,10 @@ input {
         justify-content: center;
     }
 
+    .custom-margin-top {
+        margin-top: 50px;
+    }
+
 }
 
 /* For sreeen sizes from 320px wide and down */
@@ -317,5 +352,10 @@ input {
     .custom-display-3 {
         font-size: 1rem;
     }
+
+    .custom-margin-top {
+        margin-top: 65px;
+    }
+
 
 }
