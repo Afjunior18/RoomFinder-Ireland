@@ -38,6 +38,10 @@
 - Provide moderation tools for admins to review, approve, or reject user-generated content and user registrations.
 
 
+## General observation:
+
+As this is my first experience with the Agile approach, some points were not very clear to me. I tried to follow the entire plan outlined initially before developing any code. However, I couldn't stick to it strictly; there were tasks that were supposed to be completed within certain deadlines, but I had to extend or advance them because it made more sense during development. I tried to stay as close as possible to the initial plan, but I had difficulty doing so. Many tasks from future sprints were brought forward as initial tasks that were implemented close to completion. This was my biggest challenge.
+
 ## Sprint
 
 In our sprint planning session, we utilize the Fibonacci sequence to assign story points to each user story. This sequence offers a relative scale that helps us estimate the effort required for completing each task. A story point of 1 represents the simplest and quickest tasks, while higher numbers such as 8 or 13 indicate more complex and time-consuming stories. By using this scale, we can effectively prioritize and allocate resources to ensure a successful sprint delivery.
@@ -83,6 +87,8 @@ For this Sprint 2, my goal is to conclude by 11:00 PM on March 6th, starting tod
 
 For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today on March 7th at 9:00 AM.
 
+For sprint 3, most of the expected outcomes were achieved. However, the second topic was only completed towards the end of the project.
+
 - Implement room listing creation functionality - *(8 story points)*
 
 - Develop room listing management features for users - *(8 story points)*
@@ -92,6 +98,8 @@ For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today o
 - Deploy updated features - *(3 story points)*
 
 ### Sprint 4:
+
+This functionality was not added at this stage of the project; it will be implemented in the future.
 
 - Implement room searching functionality - *(13 story points)*
 
@@ -103,6 +111,8 @@ For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today o
 
 ### Sprint 5:
 
+This functionality was not added at this stage of the project; it will be implemented in the future.
+
 - Develop messaging system between users - *(13 story points)*
 
 - Implement notifications for new messages - *(13 story points)*
@@ -112,6 +122,8 @@ For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today o
 - Conduct testing of messaging system - *(3 story points)*
 
 ### Sprint 6:
+
+This sprint was the most challenging, integrating front-end with back-end. It took several days to work on this functionality, but all CRUD functionalities are now working, both in the admin panel and on the front-end.
 
 - Allow users to manage their profiles - *(5 story points)*
 
@@ -123,19 +135,7 @@ For Sprint 3, my goal is to conclude by 11:59 PM on March 12th, starting today o
 
 ### Sprint 7:
 
-- Develop admin tools for content moderation - *(8 story points)*
-
-- Deploy admin panel features - *(3 story points)*
-
-- Conduct testing of admin panel functionality - *(3 story points)*
-
-### Sprint 8:
-
-- Identify performance in the application - *(3 story points)*
-
-- Conduct testing to ensure good performance - *(5 story points)*
-
-### Sprint 9:
+Manual tests were conducted to ensure smooth operation. Image uploads will be included in the README file documenting the testing process.
 
 - Conduct comprehensive testing of all features and functionalities - *(5 story points)*
 
