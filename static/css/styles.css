@@ -78,6 +78,12 @@ body {
     border: #f27405;
 }
 
+.custom-btn {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
 #custom-btn:hover {
     color:#f27405;
     background-color:#03a64a;
@@ -108,7 +114,19 @@ body {
     border: #f27405;
 }
 
+.custom-btn-approve {
+    color:#f2f2f2;
+    background-color: #f27405;
+    border: #f27405;
+}
+
 #custom-btn-approve:hover {
+    color:#f2f2f2;
+    background-color: #02733e;
+    border: #f27405;
+}
+
+.custom-btn-approve:hover {
     color:#f2f2f2;
     background-color: #02733e;
     border: #f27405;
@@ -369,6 +387,5 @@ input {
     .custom-margin-top {
         margin-top: 65px;
     }
-
 
 }

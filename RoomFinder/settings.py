@@ -34,8 +34,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     '.herokuapp.com',
-    '8000-afjunior18-roomfinderir-y1qqy084b8a.ws-eu110.gitpod.io',
-    '8000-afjunior18-roomfinderir-y1qqy084b8a.ws-eu110.gitpod.io'
+    '8000-afjunior18-roomfinderir-c2a5vkc6wuu.ws-eu110.gitpod.io'
 ]
 
 
@@ -153,8 +152,10 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
-
+STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+
 
 # STATICFILES_STORAGE = 'whitenoise.storage.'
 #                       'CompressedManifestStaticFilesStorage'
@@ -173,5 +174,5 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 CSRF_TRUSTED_ORIGINS = [
     "https://*.codeanyapp.com",
     "https://*.herokuapp.com",
-    "https://8000-afjunior18-roomfinderir-y1qqy084b8a.ws-eu110.gitpod.io"
+    "https://8000-afjunior18-roomfinderir-c2a5vkc6wuu.ws-eu110.gitpod.io"
 ]

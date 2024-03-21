@@ -281,3 +281,14 @@ The "Contact Us" page is simple, providing direct contact information such as em
 
 ![Contact us page](docs/images/contact_us.png)
 
+## Testing
+
+**Validation**
+
+Python files have been validated using [Python Linter](https://pep8ci.herokuapp.com/). Attached are screenshots of the validation.
+
+![Setting.py](docs/images/validador_settings_py.png)
+![Admin.py](docs/images/validator_admin_py.png)
+![Forms.py](docs/images/validator_forms_py.png)
+![Models.py](docs/images/validator_models_py.png)
+![]()
