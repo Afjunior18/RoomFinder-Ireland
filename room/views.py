@@ -52,9 +52,7 @@ def add_room(request):
                 request, messages.SUCCESS,
                 'Room submitted and awaiting approval'
             )
-            
             return redirect('room_finder')
-            
     else:
         form = RoomForm()
     return render(request, 'add_room.html', {'form': form})
@@ -64,8 +62,11 @@ def room_finder(request):
     if request.user.is_superuser:
         rooms = Room.objects.all().order_by("-created_on")
     else:
-        rooms = Room.objects.filter(is_pending_approval=False).order_by("-created_on")
-
+        rooms = (
+            Room.objects
+            .filter(is_pending_approval=False)
+            .order_by("-created_on")
+            )
     return render(request, 'room_finder.html', {'rooms': rooms})
 
 
@@ -92,6 +93,7 @@ def delete_room(request, room_id):
 
     return redirect('room_finder')
 
+
 @login_required
 def edit_room(request, room_id):
     room = get_object_or_404(Room, id=room_id)
@@ -102,8 +104,11 @@ def edit_room(request, room_id):
         if form.is_valid():
             if not room.is_pending_approval:
                 room.is_pending_approval = True
-                messages.success(request, 'Room edited successfully and is pending approval.')
+                messages.success(
+                    request,
+                    'Room edited successfully and is pending approval.'
+                    )
             room.save()
             return redirect('room_finder')
 
-    return render(request, 'edit_room.html', {'form':form, 'room':room})
+    return render(request, 'edit_room.html', {'form': form, 'room': room})
