@@ -73,6 +73,8 @@ UX efforts **must** address these:
 - Post approved/unpproved (only by admin).
 - User Profile Management.
 
+Next topics, will be implemented in the future:
+
 UX efforts **should have** these:
 - Location API Integration.
 - Room Searching and Filtering.
@@ -158,14 +160,124 @@ The skeleton of RoomFinder Ireland's platform translates the structural design i
 
 * [Available Rooms](docs/images/available-rooms.png)
 
+
 **Responsive Design:** Special attention is given to ensuring that the platform is responsive across various devices and screen sizes. The wireframes are optimized to adapt seamlessly to laptops, tablets, and smartphones, providing a consistent user experience across all devices.
 
-**Database Schema:** Below is the preliminary layout for the database tables:
+![Responsiveness]()
 
-![Database Schema](docs/images/roomDataBase.png)
+**Colour Scheme:**
+The chosen colors for the project development were inspired by the colors of the Irish flag, which are green, white, and orange. Since the app is about room search in Ireland, I thought it would be a good idea for users to have this association in mind when accessing the platform.
 
-*Note: The Message table will be implemented only if a decision is made to include a messaging system in the project. However, it may not be included in the final implementation.*
+I used the following [Ireland Flag](docs/images/flag02.png) to generate the following color scheme on coolers.co. The theme colors selected were: #03a64a (dark green), #02733e (light green), #f27405 (dark orange), #f25c05 (light orange), and #f2f2f2 (white) was added.
 
-## Interface:
+![Colour Schema](docs/images/color_schema.png)
 
+
+**Typography:**
+
+The typography chosen for the project is "Roboto", a clean and modern sans-serif font. This font was selected for its readability and versatility, making it suitable for various text elements throughout the application.
+
+![Typography - Roboto sans-serif font](docs/images/font-roboto.png)
+
+**Database Schema:**
+
+This diagram depicts the relationship between two tables: Room and User. The Room table stores information about available rental rooms, while the User table, provided by Django, stores user data.
+
+The Room table is linked to the User table through a foreign key relationship using the room_owner_id field, representing the room owner.
+
+Below is the preliminary layout for the database tables:
+
+![Database Schema](docs/images/ERD_project4.png)
+
+## Features:
+
+**Navbar**:
+
+I chose "RoomFinder Ireland" because it clearly tells users what the app does: helps them find rooms in Ireland. TThe inclusion of the magnifying glass symbolizes the search functionality, indicating to users that they can search for available rooms using the platform.
+Additionally, the use of "RoomFinder Ireland" as the application name emphasizes its focus on room finding services specifically in Ireland.
+
+![Logo](docs/images/logo.png)
+
+**Signed Out**
+When the user is signed out, they are directed to a simplified navbar with only "Register" and "Login" options.
+
+![Signed Out](docs/images/sign_out.png)
+
+**Signed In**
+
+When signed in, users have access to all navigation links. Additionally, a message indicates the user's logged-in status, displaying their username.
+
+![Signed In](docs/images/navigation.png)
+
+As soon as the user signs in, a modal pops up:
+
+![Signed In Modal](docs/images/modal_logged_as_user_1.png)
+
+
+**Log In**
+
+The "Log In" page is a simple form requesting the username and password for users who already have an account.
+
+![Log In](docs/images/log_in.png)
+
+**Register/Sign Up**
+
+The "Register" or "Sign Up" page features a simple form for new users to create an account. The form typically includes fields for username, email, password, and password confirmation. Additionally, instructions are provided on password requirements for users.
+
+![Register/SignUp](docs/images/sign_up.png)
+
+**Log out**
+
+The "Log Out" page displays a confirmation message asking the user if they really want to log out. If confirmed, a modal appears confirming the successful logout.
+
+![Log out page](docs/images/log_out.png)
+
+![Modal Successful sign out](docs/images/modal_sign_out.png)
+
+**Hamburguer menu**
+
+On smaller screen sizes, a hamburger menu is displayed.
+
+![Hamburguer Menu](docs/images/menu-toggle.png)
+
+**Carousel**
+A carousel effect on the homepage automatically displays several photos of rooms.
+
+![Carousel](docs/images/carousel.png)
+
+**Add a Room page**
+
+The add_room page allows users to fill out a form with room information (listing), and upon submission, it is sent for approval by the admin. Once approved, it is available to view in card format on the room_finder page.
+
+![Add Room Form](docs/images/add_room.png)
+
+![Modal awaiting](docs/images/modal_awaiting.png)
+
+**Room finder page**
+
+The room_finder page displays cards that have been approved by the admin. If the user is a superuser (admin), they have access to all the cards and can approve pending ones, as well as delete or edit existing ones. Regular users can only see approved cards, and they have the option to delete or edit their own listings if needed.
+
+![Room Finder page](docs/images/room_finder.png)
+
+![Card displayed for Admin](docs/images/card_admin_all_buttons.png)
+
+![Card displayed dor Regular user](docs/images/card_user_edit_delete_button.png)
+
+**Edit room page**
+
+When a user clicks on the edit button, they are redirected to a page containing the same form as the add_room page. After making the necessary edits and submitting the form, the listing becomes pending approval by the admin.
+
+![Edit Form](docs/images/edit_form.png)
+
+**Delete Button**
+
+Both superusers and regular users, when clicking on the delete button, are prompted with a modal for confirmation to ensure they indeed want to delete the post. This practice aims to provide a good user experience.
+
+![Modal Delete Confirmation](docs/images/modal_delete.png)
+
+**Contact us page**
+
+The "Contact Us" page is simple, providing direct contact information such as email, phone number, and links to social media profiles.
+
+![Contact us page](docs/images/contact_us.png)
 

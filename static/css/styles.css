@@ -311,6 +311,18 @@ input {
         font-size: 0.8rem;
         padding-bottom: 10px;
     }
+    .custom-align {
+        display: flex;
+        justify-content: center;
+    }
+
+    .custom-margin-top {
+        margin-top: 10px;
+    }
+
+    .custom-margin-bottom {
+        margin-bottom: 100px;
+    }
 
 }
 
