@@ -161,10 +161,6 @@ The skeleton of RoomFinder Ireland's platform translates the structural design i
 * [Available Rooms](docs/images/available-rooms.png)
 
 
-**Responsive Design:** Special attention is given to ensuring that the platform is responsive across various devices and screen sizes. The wireframes are optimized to adapt seamlessly to laptops, tablets, and smartphones, providing a consistent user experience across all devices.
-
-![Responsiveness]()
-
 **Colour Scheme:**
 The chosen colors for the project development were inspired by the colors of the Irish flag, which are green, white, and orange. Since the app is about room search in Ireland, I thought it would be a good idea for users to have this association in mind when accessing the platform.
 
@@ -305,8 +301,6 @@ The "Contact Us" page is simple, providing direct contact information such as em
 
 - **Heroku PostgreSQL**: Served as the database solution both during development and deployment phases.
 
-
-
 ## Testing
 
 **Google's Lighthouse Performance**
@@ -356,6 +350,8 @@ The "Contact Us" page is simple, providing direct contact information such as em
 - [script.js](docs/images/validator_js_script.png)
 
 **Responsiveness**
+
+Special attention is given to ensuring that the platform is responsive across various devices and screen sizes. The wireframes are optimized to adapt seamlessly to laptops, tablets, and smartphones, providing a consistent user experience across all devices.
 
 - [Homepage - large](docs/images/responsiveness_home_largedevice.png)
 - [Homepage - medium](docs/images/responsiveness_home_medium.png)
