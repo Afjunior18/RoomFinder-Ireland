@@ -155,17 +155,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'), ]
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-
-
-# STATICFILES_STORAGE = 'whitenoise.storage.'
-#                       'CompressedManifestStaticFilesStorage'
-
-# Cloudinary, storage images
-
-# CLOUDINARY_URL = os.getenv('CLOUDINARY_URL', 'cloudinary://452764376732519:'
-#                            'vKBrQ6fjHwFxaIs2kk4vk9ypfsU@dnijabg52')
-
-
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 

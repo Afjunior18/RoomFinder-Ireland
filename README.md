@@ -189,6 +189,10 @@ Below is the preliminary layout for the database tables:
 
 ![Database Schema](docs/images/ERD_project4.png)
 
+**Agile Methodology**
+
+The entire development process following Agile methodology can be found here [AGILE](AGILE.md). I wanted to leave a note, stating that all user stories, epics, Kanban board were verified, and a comment was added at the conclusion of each user story. It's worth noting that some user stories had more than one task, and while some tasks remained open, I've added a note that they will be achieved in the future. For all other completed tasks, a tick mark was placed on each of them.
+
 ## Features:
 
 **Navbar**:
@@ -281,14 +285,240 @@ The "Contact Us" page is simple, providing direct contact information such as em
 
 ![Contact us page](docs/images/contact_us.png)
 
+## Technologies Used
+
+- **HTML**: Formed the foundation language for structuring the layout of all templates.
+
+- **CSS**: Customized CSS was applied to enhance the visual aesthetics of the page.
+
+- **JavaScript**: Integrated JavaScript extensively to manipulate the Document Object Model (DOM) and interact with the backend for CRUD (Create, Read, Update, Delete) operations on the database.
+
+- **Python**: We used Python in the Room Finder project for the backend development, which includes the system's logic and interaction with the database.
+
+- **Django**: Employed as the primary Python framework for this project.
+
+- **Django All Auth**: Implemented to manage user authentication functionalities such as sign-in, sign-up, and sign-out.
+
+- **Cloudinary**: Integrated Cloudinary to manage image uploads and storage efficiently within the Room Finder project
+
+- **Heroku**: Utilized as the deployment platform to host the project and make it accessible to the public.
+
+- **Heroku PostgreSQL**: Served as the database solution both during development and deployment phases.
+
+
+
 ## Testing
 
-**Validation**
+**Google's Lighthouse Performance**
 
-Python files have been validated using [Python Linter](https://pep8ci.herokuapp.com/). Attached are screenshots of the validation.
+- [Homepage - Desktop](docs/images/lighthouse_homepage_desktop.png)
+- [Homepage - Mobile](docs/images/lighthouse_homepage_mobile.png)
+- [Contact - Desktop](docs/images/lighthouse_contact_desktop.png)
+- [Contact - Mobile](docs/images/lighthouse_contact_mobile.png)
+- [Sign in - Desktop](docs/images/lighthouse_login_dasktop.png)
+- [Sign in - Mobile](docs/images/lighthouse_login_mobile.png)
+- [Register - Desktop](docs/images/lighthouse_register_dasktop.png)
+- [Register - Mobile](docs/images/lighthouse_register_mobile.png)
+- [Add room - Desktop](docs/images/lighthouse_addroom_dasktop.png)
+- [Add room - Mobile](docs/images/lighthouse_addroom_dasktop.png)
+- [Room Finder - Desktop](docs/images/lighthouse_findroom_desktop.png)
+- [Room Finder - Mobile](docs/images/lighthouse_findroom_desktop.png)
 
-![Setting.py](docs/images/validador_settings_py.png)
-![Admin.py](docs/images/validator_admin_py.png)
-![Forms.py](docs/images/validator_forms_py.png)
-![Models.py](docs/images/validator_models_py.png)
-![]()
+
+**Code Validation**
+
+**Python files** have been validated using [Python Linter](https://pep8ci.herokuapp.com/). Attached are screenshots of the validation.
+
+- [Setting.py](docs/images/validador_settings_py.png)
+- [Admin.py](docs/images/validator_admin_py.png)
+- [Forms.py](docs/images/validator_forms_py.png)
+- [Models.py](docs/images/validator_models_py.png)
+- [Urls.py](docs/images/validator_urls_py.png)
+- [Views.py](docs/images/validator_views_py.png)
+
+**HTML pages** have been validated through [W3C](https://validator.w3.org/).
+
+- [add_room.html](docs/images/validator_add_room_html.png)
+- [contact.html](docs/images/validator_contact_html.png)
+- [edit_room](docs/images/validator_edit_form_html.png)
+- [index/base.html](docs/images/validator_html_home.png)
+- [login.html](docs/images/validator_login_html.png)
+- [signup.html](docs/images/validator_register_html.png)
+- [room_finder.html](docs/images/validator_room_finder_html.png)
+- [signout.html](docs/images/validator_sign_out_html.png)
+
+**CSS file** has been validated through [W3C](https://jigsaw.w3.org/css-validator/).
+
+- [style.css](docs/images/validator_css.png)
+
+**JavaScript** has been validated through [Jshint](https://jshint.com/)
+
+- [script.js](docs/images/validator_js_script.png)
+
+**Responsiveness**
+
+- [Homepage - large](docs/images/responsiveness_home_largedevice.png)
+- [Homepage - medium](docs/images/responsiveness_home_medium.png)
+- [Homepage - small](docs/images/responsiveness_home_small.png)
+- [Contact - Large](docs/images/responsiveness_contact_large.png)
+- [Contact - Medium](docs/images/responsiveness_contact_medium.png)
+- [Contact - small](docs/images/responsiveness_contact_small.png)
+- [Add Room - large](docs/images/responsiveness_addroom_large.png)
+- [Add Room - medium](docs/images/responsiveness_addroom_medium.png)
+- [Add Room - small](docs/images/responsiveness_addroom_medium.png)
+- [Room Finder - large](docs/images/responsiveness_roomfind_large.png)
+- [Room Finder - medium](docs/images/responsiveness_roomfind_medium.png)
+- [Room Finder - small](docs/images/responsiveness_roomfind_small.png)
+
+**Manual Test**
+
+*Note: "?" - Will be implemented in the future*
+
+**As an Admin I can ....**
+
+| Status  | Feature |                                                                           
+|:-------:|:--------|
+| &check; | utilize a text editor within the admin panel, create and edit room listings |       
+| &check; | filter and search all room listings from the admin page |
+| &check; | easily navigate the admin panel, view, search, add, and delete room listing |
+| &check; | approve new room listings offered by users, ensure listings are accurate and suitable |
+| &check; | access a list of pending room listings |
+| &check; | reject room listings that do not meet the platform's standards |
+| &check; | utilize a text editor within the admin panel |
+|    ?    | receive notifications when a room is rented |
+
+**As a User offering a room ....**
+
+| Status  | Feature |                                                                           
+|:-------:|:--------|
+| &check; | create an account |       
+| &check; | access the platform's features |
+| &check; | easily create a listing for a room I have available for rent, providing all necessary details and photos |
+|    ?    | receive an alert, so be nformed when my post has been submitted for review  |
+| &check; | manage my room listings, including editing or deleting them as needed |
+| &check; | receive notifications when someone contacts me regarding my room listing |
+| &check; | easily find relevant contact information, contact the site administrator via email |
+
+**As a User searching a room ....**
+
+| Status  | Feature |                                                                           
+|:-------:|:--------|
+| &check; | create an account |       
+| &check; | access the platform's features |
+|    ?    | search for available rooms based on my preferences (location, price, type of room) |
+| &check; | receive an alert, so be nformed when my post has been submitted for review  |
+| &check; | view detailed information and photos of available rooms |
+| &check; | get the contact details of the owner, such as email or phone |
+| &check; | easily find relevant contact information, contact the site administrator via email |
+| &check; | access the platform from any screen size and still have a good browsing experience |
+
+
+**Manual Testing features**
+
+| Status  | Feature |
+| &check; | Homepage|                                                                             
+|:-------:|:--------|
+| &check; | Easy Navigation on the Navbar Links |       
+| &check; | Visual Information, such as Images |
+| &check; | Easy Identification of the Searched Content on the Page |
+| &check; | Informative Indication of User Authentication Status |
+
+
+| Status  | Feature  |
+| &check; | Add room |                                                                             
+|:-------:|:--------|
+| &check; | Simple and Descriptive Form |       
+| &check; | Icons Associated with Each Input |
+| &check; | Ability to Upload Photos |
+| &check; | Error Messages for Incorrect Field Entries |
+| &check; | An informative button for form submission. |
+| &check; | Receive a message confirming that my form has been submitted after sending it. |
+
+
+| Status  | Feature  |
+| &check; | Room Finder |                                                                             
+|:-------:|:--------|
+| &check; | Easy visualization of each advertisement (card) |       
+| &check; | Essential information displayed clearly for choosing my room. |
+| &check; | Delete button available if I want to remove any of my posts.|
+| &check; | Edit button provided if I need to correct any information.|
+| &check; | Contact information available for the owner of the advertisement |
+| &check; | Have a confirmation prompt when pressing the delete button to prevent accidental deletion. |
+
+
+| Status  | Feature  |
+| &check; | Contact |                                                                             
+|:-------:|:--------|
+| &check; | Easy location of telephone number if I want to speak with the site administrator. |       
+| &check; | Easy location of email if I want to send a message to the site administrator. |
+| &check; | Ability to Upload Photos. |
+| &check; | Links to social media profiles. |
+
+
+## Deployment
+
+This website is deployed to Heroku from a GitHub repository, the following steps were taken:
+
+**Setting up a GitHub Repository**
+- To begin, ensure that you're logged into GitHub and navigate to the Code Institute's template.
+- Select "Use this template" and opt to "Create a new repository" from the dropdown menu.
+- Provide a name for the repository and hit "Create repository from template."
+- Upon successful creation of the repository, I utilized the green Gitpod button to establish a workspace in Gitpod, facilitating the coding process for the site.
+
+**Creating an Application on Heroku**
+- Following the setup of the GitHub repository, proceed to Heroku and log in to your account.
+- Once logged in, navigate to the home page and click on "New," then select "Create new app" from the dropdown menu.
+- Assign a unique name to your app and select a region—I opted for Europe since I reside there.
+- Finally, click "Create app" to complete the process.
+
+**Setting up a Database on ElephantSQL**
+- Begin by logging into the ElephantSQL website and navigate to the dashboard.
+- Click on "Create new Instance" to initiate the database creation process.
+- Provide a distinctive Name for your instance and ensure the plan is set to "Tiny Turtle Free." The tags field can be left blank.
+- Select a region closest to your location.
+- Proceed to review your settings and click "Create instance" to finalize the setup.
+- Once the instance is created, navigate to the dashboard and locate your database instance name.
+- Access the details of your database instance, and in the URL section, click on the copy icon to copy the database URL.
+- Switch back to Gitpod and navigate to your project's env.py file.
+- Create a new environment variable named "DATABASE_URL" and paste the copied URL as its value. This will ensure your application can connect to the database seamlessly.
+
+
+**Deploying to Heroku**
+
+- Return to the Heroku dashboard and select your app. Then, navigate to the Settings tab.
+- In the Settings page, scroll down to the "Config Vars" section. Here, you'll need to set up several environment variables:
+- Set DATABASE_URL to the ElephantSQL URL.
+- Create a SECRET_KEY; this can be any secure string.
+- Set CLOUDINARY_URL to your Cloudinary URL.
+- Finally, set the PORT variable to 8000.
+- After configuring the environment variables, scroll to the top of the page and switch to the Deploy tab.
+- n the Deployment method section, choose GitHub and sign in to your GitHub account if prompted.
+- In the "Search for a repository to connect to" box, enter the name of your GitHub repository and click "Connect."
+- Once the repository is connected, scroll down to the Manual Deploy section and click "Deploy Branch."
+- After the deployment process is complete, you'll see a "View App" button below. Click on it to access your newly deployed app.
+
+## Credits
+
+- Balsamiq: Used for creating wireframes.
+- GitHub: Store my repository.
+- Font Awesome: A library of icons and symbols used for the webpage.
+- Google Fonts: Imported fonts for the website.
+- Paint: Used to edit screenshots and convert image extensions for the readme file.
+- Chrome Dev Tools: Frequently used to experiment with code and preview on different screens.
+- TinyPNG: Used for compressing and optimizing images to improve performance.
+- Simple Image Resizer: Used for resizing images.
+- Unicorn Revealer: Chrome extension for debugging layout issues and visualizing hidden properties on webpages.
+- coolers.co: Color schema
+- Django documentation
+- Bootstrap documentation
+
+
+## Acknowledgment
+
+- I would like to give a huge shoutout to my mentor, David Bowers, for his amazing feedback and guidance. Thanks a bunch for all the help, feedback, and encouragement along the way
+
+- I'd like to extend a heartfelt thank you to the course's tutoring channel. Their professionalism, attention, and patience always come through, especially during those panic-inducing moments. A special shoutout to Tutor Tomas, who helped me out when I felt stuck and couldn't see a way forward.
+
+- To the entire Slack community, across its various channels, thank you for your unwavering support throughout the course. A special shoutout goes to Marko_ci, my course cohort, who consistently shared helpful resources and messages that greatly contributed to the completion of this project. I'm truly grateful for it!
+
+
