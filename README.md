@@ -189,6 +189,10 @@ Below is the preliminary layout for the database tables:
 
 The entire development process following Agile methodology can be found here [AGILE](AGILE.md). I wanted to leave a note, stating that all user stories, epics, Kanban board were verified, and a comment was added at the conclusion of each user story. It's worth noting that some user stories had more than one task, and while some tasks remained open, I've added a note that they will be achieved in the future. For all other completed tasks, a tick mark was placed on each of them.
 
+## Live Website
+
+To access the live version of the website, click [here](https://room-finder-ireland-6026a4a9591e.herokuapp.com/).
+
 ## Features:
 
 **Navbar**:
