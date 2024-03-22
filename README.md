@@ -450,6 +450,42 @@ Special attention is given to ensuring that the platform is responsive across va
 | &check; | Ability to Upload Photos. |
 | &check; | Links to social media profiles. |
 
+## Bugs
+
+
+**Issue** - The image thumbnails were not displaying correctly on the room detail page.
+
+- Cause - Initially, I suspected an issue with the image file paths. However, upon closer inspection, I discovered that the Cloudinary URLs were not being rendered properly due to a missing attribute in the template.
+
+- Solution - Adding the .url attribute to the image reference in the template resolved the issue, ensuring that the correct Cloudinary URLs were generated and displayed.
+
+**Issue** - Was encountering errors when uploading room images, with the images failing to display after the upload process.
+
+- Cause - After investigating, find out that the Cloudinary upload preset configured in the frontend did not match the preset specified in the backend settings, causing the upload process to fail.
+
+- Solution - Aligning the Cloudinary upload preset settings between the frontend and backend resolved the issue, ensuring that images were uploaded successfully and displayed correctly after the upload process.
+
+**Issue** - The footer section of the website was not staying fixed at the bottom of the page, causing it to overlap with the content on certain pages.
+
+- Cause - Upon inspection of the CSS styles, it was found that the footer did not have the appropriate positioning properties to keep it fixed at the bottom of the page.
+
+- Solution - By applying the CSS property position: fixed to the footer element and setting bottom: 0, the footer was successfully fixed at the bottom of the page, resolving the overlapping issue.
+
+**Issue** - I encountered an issue during deployment where images and some static files were not being uploaded properly to Heroku, resulting in discrepancies between the production and preview versions of the site.
+
+- Cause - After seeking assistance from the course tutor, it was suggested that there might be a conflict between Whitenoise and Cloudinary. Upon investigation, I removed the line of code STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage' from the settings file. This initially resolved the issue, and the images started uploading correctly during deployment on Heroku. However, after two days, the problem resurfaced, and no files were being uploaded again.
+
+- Solution - Upon further consultation with the tutor, it was recommended to add STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage' to the settings file. After adding this line and running python3 manage.py collectstatic, all static files, including images, were successfully uploaded during deployment, ensuring consistency between the deployed version and the preview.
+
+
+**Issue** - I encountered an error in the console when clicking the edit button. The error message displayed is: [](docs/images/error.png)
+
+- Cause - The main issue seems to originate from the file "script.66f705e79209.js" at line 9, column 21. This indicates an attempt to access a file in the staticfiles directory. However, even after running the command python3 manage.py collectstatic and making changes to my script, the file does not update, preventing access.
+
+- Status - As of now, the error remains unresolved. Despite the error, the edit functionality seems to be working fine, as I can open the modal and edit the content successfully. However, the presence of this error in the console is concerning.
+
+*Note: Due to the tight deadline for the project delivery tomorrow, it was decided to leave the issue as it is, as all other functionalities are working as expected. Further investigation may be required after the deadline.*
+
 
 ## Deployment
 
